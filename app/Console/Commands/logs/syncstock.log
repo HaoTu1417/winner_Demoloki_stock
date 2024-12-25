@@ -1,0 +1,1030 @@
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'data_stock.stocks' doesn't exist (SQL: select * from `stocks` where `stock` = ABI and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+  • A table was not found: You might have forgotten to run your migrations. You can run your migrations using `php artisan migrate`. 
+    https://laravel.com/docs/master/migrations#running-migrations
+
+      [2m+10 vendor frames [22m
+  11  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  25  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'data_stock.stocks' doesn't exist (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+  • A table was not found: You might have forgotten to run your migrations. You can run your migrations using `php artisan migrate`. 
+    https://laravel.com/docs/master/migrations#running-migrations
+
+      [2m+10 vendor frames [22m
+  11  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  25  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'data_stock.stocks' doesn't exist (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+  • A table was not found: You might have forgotten to run your migrations. You can run your migrations using `php artisan migrate`. 
+    https://laravel.com/docs/master/migrations#running-migrations
+
+      [2m+10 vendor frames [22m
+  11  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  25  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'data_stock.stocks' doesn't exist (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+  • A table was not found: You might have forgotten to run your migrations. You can run your migrations using `php artisan migrate`. 
+    https://laravel.com/docs/master/migrations#running-migrations
+
+      [2m+10 vendor frames [22m
+  11  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  25  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'data_stock.stocks' doesn't exist (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+  • A table was not found: You might have forgotten to run your migrations. You can run your migrations using `php artisan migrate`. 
+    https://laravel.com/docs/master/migrations#running-migrations
+
+      [2m+10 vendor frames [22m
+  11  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  25  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S02]: Base table or view not found: 1146 Table 'data_stock.stocks' doesn't exist (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+  • A table was not found: You might have forgotten to run your migrations. You can run your migrations using `php artisan migrate`. 
+    https://laravel.com/docs/master/migrations#running-migrations
+
+      [2m+10 vendor frames [22m
+  11  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  25  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [1049] Unknown database 'data_stock' (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [1049] Unknown database 'data_stock' (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [1049] Unknown database 'data_stock' (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select * from `stocks` where `stock` = TOS and `status_update` = 0 limit 1)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+18 vendor frames [22m
+  19  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/SyncStock.php:55
+      Illuminate\Database\Query\Builder::first()
+
+      [2m+13 vendor frames [22m
+  33  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()

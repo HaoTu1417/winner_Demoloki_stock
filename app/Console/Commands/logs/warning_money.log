@@ -1,0 +1,2702 @@
+ echo from db 
+object(Illuminate\Support\Collection)#1193 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1195 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1197 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 1
+[{"stock":"AAA"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "AAA"
+
+$customerData->id int(12)
+
+total price 0
+item 
+object(stdClass)#1195 (3) {
+  ["customer_id"]=>
+  int(12)
+  ["deposit"]=>
+  string(7) "5000000"
+  ["money"]=>
+  string(8) "50000000"
+}
+data object(Illuminate\Support\Collection)#1193 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1195 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1197 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 2
+[{"stock":"VSI"},{"stock":"MTL"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "VSI"
+
+$customerData->id int(24)
+
+$item->stock string(3) "MTL"
+
+$customerData->id int(24)
+
+total price 0
+item 
+object(stdClass)#1197 (3) {
+  ["customer_id"]=>
+  int(24)
+  ["deposit"]=>
+  string(7) "2000000"
+  ["money"]=>
+  string(8) "20000000"
+}
+data object(Illuminate\Support\Collection)#1193 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1195 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1197 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+echo from db 
+object(Illuminate\Support\Collection)#1201 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1227 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1215 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 1
+[{"stock":"AAA"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "AAA"
+
+$customerData->id int(12)
+
+total price 0
+item 
+object(stdClass)#1227 (3) {
+  ["customer_id"]=>
+  int(12)
+  ["deposit"]=>
+  string(7) "5000000"
+  ["money"]=>
+  string(8) "50000000"
+}
+data object(Illuminate\Support\Collection)#1201 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1227 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1215 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 2
+[{"stock":"VSI"},{"stock":"MTL"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "VSI"
+
+$customerData->id int(24)
+
+$item->stock string(3) "MTL"
+
+$customerData->id int(24)
+
+total price 0
+item 
+object(stdClass)#1215 (3) {
+  ["customer_id"]=>
+  int(24)
+  ["deposit"]=>
+  string(7) "2000000"
+  ["money"]=>
+  string(8) "20000000"
+}
+data object(Illuminate\Support\Collection)#1201 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1227 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1215 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+echo from db 
+object(Illuminate\Support\Collection)#1212 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1241 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1226 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 1
+[{"stock":"AAA"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "AAA"
+
+$customerData->id int(12)
+
+total price 0
+item 
+object(stdClass)#1241 (3) {
+  ["customer_id"]=>
+  int(12)
+  ["deposit"]=>
+  string(7) "5000000"
+  ["money"]=>
+  string(8) "50000000"
+}
+data object(Illuminate\Support\Collection)#1212 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1241 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1226 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 2
+[{"stock":"VSI"},{"stock":"MTL"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "VSI"
+
+$customerData->id int(24)
+
+$item->stock string(3) "MTL"
+
+$customerData->id int(24)
+
+total price 0
+item 
+object(stdClass)#1226 (3) {
+  ["customer_id"]=>
+  int(24)
+  ["deposit"]=>
+  string(7) "2000000"
+  ["money"]=>
+  string(8) "20000000"
+}
+data object(Illuminate\Support\Collection)#1212 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1241 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1226 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+echo from db 
+object(Illuminate\Support\Collection)#1213 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1255 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1240 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 1
+[{"stock":"AAA"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "AAA"
+
+$customerData->id int(12)
+
+total price 0
+item 
+object(stdClass)#1255 (3) {
+  ["customer_id"]=>
+  int(12)
+  ["deposit"]=>
+  string(7) "5000000"
+  ["money"]=>
+  string(8) "50000000"
+}
+data object(Illuminate\Support\Collection)#1213 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1255 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1240 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 2
+[{"stock":"VSI"},{"stock":"MTL"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "VSI"
+
+$customerData->id int(24)
+
+$item->stock string(3) "MTL"
+
+$customerData->id int(24)
+
+total price 0
+item 
+object(stdClass)#1240 (3) {
+  ["customer_id"]=>
+  int(24)
+  ["deposit"]=>
+  string(7) "2000000"
+  ["money"]=>
+  string(8) "20000000"
+}
+data object(Illuminate\Support\Collection)#1213 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1255 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1240 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+echo from db 
+object(Illuminate\Support\Collection)#1202 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1269 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1254 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 1
+[{"stock":"AAA"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "AAA"
+
+$customerData->id int(12)
+
+total price 0
+item 
+object(stdClass)#1269 (3) {
+  ["customer_id"]=>
+  int(12)
+  ["deposit"]=>
+  string(7) "5000000"
+  ["money"]=>
+  string(8) "50000000"
+}
+data object(Illuminate\Support\Collection)#1202 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1269 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1254 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 2
+[{"stock":"VSI"},{"stock":"MTL"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "VSI"
+
+$customerData->id int(24)
+
+$item->stock string(3) "MTL"
+
+$customerData->id int(24)
+
+total price 0
+item 
+object(stdClass)#1254 (3) {
+  ["customer_id"]=>
+  int(24)
+  ["deposit"]=>
+  string(7) "2000000"
+  ["money"]=>
+  string(8) "20000000"
+}
+data object(Illuminate\Support\Collection)#1202 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1269 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1254 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+echo from db 
+object(Illuminate\Support\Collection)#1174 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1283 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1268 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 1
+[{"stock":"AAA"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "AAA"
+
+$customerData->id int(12)
+
+total price 0
+item 
+object(stdClass)#1283 (3) {
+  ["customer_id"]=>
+  int(12)
+  ["deposit"]=>
+  string(7) "5000000"
+  ["money"]=>
+  string(8) "50000000"
+}
+data object(Illuminate\Support\Collection)#1174 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1283 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1268 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 2
+[{"stock":"VSI"},{"stock":"MTL"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "VSI"
+
+$customerData->id int(24)
+
+$item->stock string(3) "MTL"
+
+$customerData->id int(24)
+
+total price 0
+item 
+object(stdClass)#1268 (3) {
+  ["customer_id"]=>
+  int(24)
+  ["deposit"]=>
+  string(7) "2000000"
+  ["money"]=>
+  string(8) "20000000"
+}
+data object(Illuminate\Support\Collection)#1174 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1283 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1268 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+echo from db 
+object(Illuminate\Support\Collection)#1197 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1297 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1282 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 1
+[{"stock":"AAA"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "AAA"
+
+$customerData->id int(12)
+
+total price 0
+item 
+object(stdClass)#1297 (3) {
+  ["customer_id"]=>
+  int(12)
+  ["deposit"]=>
+  string(7) "5000000"
+  ["money"]=>
+  string(8) "50000000"
+}
+data object(Illuminate\Support\Collection)#1197 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1297 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1282 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 2
+[{"stock":"VSI"},{"stock":"MTL"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "VSI"
+
+$customerData->id int(24)
+
+$item->stock string(3) "MTL"
+
+$customerData->id int(24)
+
+total price 0
+item 
+object(stdClass)#1282 (3) {
+  ["customer_id"]=>
+  int(24)
+  ["deposit"]=>
+  string(7) "2000000"
+  ["money"]=>
+  string(8) "20000000"
+}
+data object(Illuminate\Support\Collection)#1197 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1297 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1282 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+echo from db 
+object(Illuminate\Support\Collection)#1215 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1311 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1296 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 1
+[{"stock":"AAA"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "AAA"
+
+$customerData->id int(12)
+
+total price 0
+item 
+object(stdClass)#1311 (3) {
+  ["customer_id"]=>
+  int(12)
+  ["deposit"]=>
+  string(7) "5000000"
+  ["money"]=>
+  string(8) "50000000"
+}
+data object(Illuminate\Support\Collection)#1215 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1311 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1296 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 2
+[{"stock":"VSI"},{"stock":"MTL"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "VSI"
+
+$customerData->id int(24)
+
+$item->stock string(3) "MTL"
+
+$customerData->id int(24)
+
+total price 0
+item 
+object(stdClass)#1296 (3) {
+  ["customer_id"]=>
+  int(24)
+  ["deposit"]=>
+  string(7) "2000000"
+  ["money"]=>
+  string(8) "20000000"
+}
+data object(Illuminate\Support\Collection)#1215 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1311 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1296 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+echo from db 
+object(Illuminate\Support\Collection)#1226 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1325 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1310 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 1
+[{"stock":"AAA"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "AAA"
+
+$customerData->id int(12)
+
+total price 0
+item 
+object(stdClass)#1325 (3) {
+  ["customer_id"]=>
+  int(12)
+  ["deposit"]=>
+  string(7) "5000000"
+  ["money"]=>
+  string(8) "50000000"
+}
+data object(Illuminate\Support\Collection)#1226 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1325 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1310 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 2
+[{"stock":"VSI"},{"stock":"MTL"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "VSI"
+
+$customerData->id int(24)
+
+$item->stock string(3) "MTL"
+
+$customerData->id int(24)
+
+total price 0
+item 
+object(stdClass)#1310 (3) {
+  ["customer_id"]=>
+  int(24)
+  ["deposit"]=>
+  string(7) "2000000"
+  ["money"]=>
+  string(8) "20000000"
+}
+data object(Illuminate\Support\Collection)#1226 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1325 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1310 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+echo from db 
+object(Illuminate\Support\Collection)#1240 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1339 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1324 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 1
+[{"stock":"AAA"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "AAA"
+
+$customerData->id int(12)
+
+total price 0
+item 
+object(stdClass)#1339 (3) {
+  ["customer_id"]=>
+  int(12)
+  ["deposit"]=>
+  string(7) "5000000"
+  ["money"]=>
+  string(8) "50000000"
+}
+data object(Illuminate\Support\Collection)#1240 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1339 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1324 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 2
+[{"stock":"VSI"},{"stock":"MTL"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "VSI"
+
+$customerData->id int(24)
+
+$item->stock string(3) "MTL"
+
+$customerData->id int(24)
+
+total price 0
+item 
+object(stdClass)#1324 (3) {
+  ["customer_id"]=>
+  int(24)
+  ["deposit"]=>
+  string(7) "2000000"
+  ["money"]=>
+  string(8) "20000000"
+}
+data object(Illuminate\Support\Collection)#1240 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1339 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1324 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+echo from db 
+object(Illuminate\Support\Collection)#1254 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1353 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1338 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 1
+[{"stock":"AAA"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "AAA"
+
+$customerData->id int(12)
+
+total price 0
+item 
+object(stdClass)#1353 (3) {
+  ["customer_id"]=>
+  int(12)
+  ["deposit"]=>
+  string(7) "5000000"
+  ["money"]=>
+  string(8) "50000000"
+}
+data object(Illuminate\Support\Collection)#1254 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1353 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1338 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 2
+[{"stock":"VSI"},{"stock":"MTL"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "VSI"
+
+$customerData->id int(24)
+
+$item->stock string(3) "MTL"
+
+$customerData->id int(24)
+
+total price 0
+item 
+object(stdClass)#1338 (3) {
+  ["customer_id"]=>
+  int(24)
+  ["deposit"]=>
+  string(7) "2000000"
+  ["money"]=>
+  string(8) "20000000"
+}
+data object(Illuminate\Support\Collection)#1254 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1353 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1338 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+echo from db 
+object(Illuminate\Support\Collection)#1268 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1367 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1352 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 1
+[{"stock":"AAA"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "AAA"
+
+$customerData->id int(12)
+
+total price 0
+item 
+object(stdClass)#1367 (3) {
+  ["customer_id"]=>
+  int(12)
+  ["deposit"]=>
+  string(7) "5000000"
+  ["money"]=>
+  string(8) "50000000"
+}
+data object(Illuminate\Support\Collection)#1268 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1367 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1352 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+listStockAvailabel 2
+[{"stock":"VSI"},{"stock":"MTL"}]
+if (listStockAvaiable != null && count(listStockAvaiable) > 0) 
+$item->stock string(3) "VSI"
+
+$customerData->id int(24)
+
+$item->stock string(3) "MTL"
+
+$customerData->id int(24)
+
+total price 0
+item 
+object(stdClass)#1352 (3) {
+  ["customer_id"]=>
+  int(24)
+  ["deposit"]=>
+  string(7) "2000000"
+  ["money"]=>
+  string(8) "20000000"
+}
+data object(Illuminate\Support\Collection)#1268 (2) {
+  ["items":protected]=>
+  array(2) {
+    [0]=>
+    object(stdClass)#1367 (3) {
+      ["customer_id"]=>
+      int(12)
+      ["deposit"]=>
+      string(7) "5000000"
+      ["money"]=>
+      string(8) "50000000"
+    }
+    [1]=>
+    object(stdClass)#1352 (3) {
+      ["customer_id"]=>
+      int(24)
+      ["deposit"]=>
+      string(7) "2000000"
+      ["money"]=>
+      string(8) "20000000"
+    }
+  }
+  ["escapeWhenCastingToString":protected]=>
+  bool(false)
+}
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+19 vendor frames [22m
+  20  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  34  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
+ 
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [2002] No such file or directory (SQL: select customer_id, ifnull(sum(deposit),0) as deposit, ifnull(sum(money),0) as money from `customer_debt` where type != 2 and status = 1 group by `customer_id`)
+
+  at /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:712
+    708|         // If an exception occurs when attempting to run a query, we'll format the error
+    709|         // message to include the bindings with SQL, which will make this exception a
+    710|         // lot more helpful to the developer instead of just the database's errors.
+    711|         catch (Exception $e) {
+  > 712|             throw new QueryException(
+    713|                 $query, $this->prepareBindings($bindings), $e
+    714|             );
+    715|         }
+    716|     }
+
+      [2m+17 vendor frames [22m
+  18  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/app/Console/Commands/WarningMoney.php:105
+      Illuminate\Database\Query\Builder::get()
+
+      [2m+13 vendor frames [22m
+  32  /home/axinstock/Documents/Projects/AxinStock/demolokivn.com/artisan:37
+      Illuminate\Foundation\Console\Kernel::handle()
