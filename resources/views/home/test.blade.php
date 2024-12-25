@@ -313,6 +313,12 @@
          <?= number_format($quantityAvaiable) ?>
         </div>
     </div>
+    <div style="display:flex;justify-content:flex-end;margin-top:10px;padding:0 10px;align-items:center">
+         <div class="col-6" style="display:flex;align-items:center;font-weight:bold;">Số dư Khả dụng:</div>
+         <div class="col-6" style="text-align:end;padding-right:15px;font-size:18px">
+         <?= number_format($information['money']) ?>
+        </div>
+    </div>
     
     
     <!-- <div style="display:flex;justify-content:flex-end;margin-top:10px;padding:0 10px;align-items:center">-->

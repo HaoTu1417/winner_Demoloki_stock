@@ -451,8 +451,8 @@
              <div  class="totalSavings__container-header-box ar-1px-b" style="width: 49%">
                 <div  class="totalSavings__container-header__title"><img src="assets/images/dowload/zhanghu.png" style="margin-right:10px;height:20px;width:20px"><span >Số dư</span></div>
                 <p  class="totalSavings__container-header__subtitle">
-                   <span style="font-size:18px">{{ number_format($information->money - ($debt != null ? $debt->total : 0), 0, ',', '.') }} VND</span>
-                  
+                   <!-- <span style="font-size:18px">{{ number_format($information->money - ($debt != null ? $debt->total : 0), 0, ',', '.') }} VND</span> -->
+                   <span style="font-size:18px">{{ number_format($information->money, 0, ',', '.') }} VND</span>
                 </p>
              </div>
              <div  class="totalSavings__container-header-box ar-1px-b" style="width: 50%">
