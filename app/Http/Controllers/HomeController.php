@@ -840,8 +840,11 @@ class HomeController extends BaseController
         $this->data['stock'] = $request->stock;
         Log::info('home controller action data'.json_encode($this->data));
         //echo '<p>Hello World</p>';
-       
-        
+       // lay het hop dong ra
+       $listDebt = DB::table('customer_debt')->where('customer_id', Auth::user()->id)->get()->toArray();
+       //$pendingOrders = DB::table('orders')->where('status',0)->get()->toArray();
+       //  $query = DB::table('stock_tplus')->where('customer_id', Auth::user()->id)->get();
+        $this->data['listDebt'] = $listDebt;
         return view('home.test', $this->data);
     }
 
