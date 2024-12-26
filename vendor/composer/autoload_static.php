@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6558f74828bca9ebecac73d90cea4b1a
+class ComposerStaticInit865b6f0b48d48f1fba5210e6a046ebb2
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -496,6 +496,25 @@ class ComposerStaticInit6558f74828bca9ebecac73d90cea4b1a
 
     public static $classMap = array (
         'App\\Admin' => __DIR__ . '/../..' . '/app/Admin.php',
+        'App\\Console\\Commands\\CalculateT' => __DIR__ . '/../..' . '/app/Console/Commands/CalculateT.php',
+        'App\\Console\\Commands\\GetHNX' => __DIR__ . '/../..' . '/app/Console/Commands/GetHNX.php',
+        'App\\Console\\Commands\\GetHNX1' => __DIR__ . '/../..' . '/app/Console/Commands/GetHNX1.php',
+        'App\\Console\\Commands\\GetHNX30' => __DIR__ . '/../..' . '/app/Console/Commands/GetHNX30.php',
+        'App\\Console\\Commands\\GetHose' => __DIR__ . '/../..' . '/app/Console/Commands/GetHose.php',
+        'App\\Console\\Commands\\GetHose1' => __DIR__ . '/../..' . '/app/Console/Commands/GetHose1.php',
+        'App\\Console\\Commands\\GetUpcom' => __DIR__ . '/../..' . '/app/Console/Commands/GetUpcom.php',
+        'App\\Console\\Commands\\GetUpcom1' => __DIR__ . '/../..' . '/app/Console/Commands/GetUpcom1.php',
+        'App\\Console\\Commands\\GetVN30' => __DIR__ . '/../..' . '/app/Console/Commands/GetVN30.php',
+        'App\\Console\\Commands\\GetVnindex' => __DIR__ . '/../..' . '/app/Console/Commands/GetVnindex.php',
+        'App\\Console\\Commands\\MatchOrder' => __DIR__ . '/../..' . '/app/Console/Commands/MatchOrder.php',
+        'App\\Console\\Commands\\ProccessDebt' => __DIR__ . '/../..' . '/app/Console/Commands/ProccessDebt.php',
+        'App\\Console\\Commands\\ProccessRef' => __DIR__ . '/../..' . '/app/Console/Commands/ProccessRef.php',
+        'App\\Console\\Commands\\ProcessWallet' => __DIR__ . '/../..' . '/app/Console/Commands/ProcessWallet.php',
+        'App\\Console\\Commands\\SetDefault' => __DIR__ . '/../..' . '/app/Console/Commands/SetDefault.php',
+        'App\\Console\\Commands\\SyncOpen' => __DIR__ . '/../..' . '/app/Console/Commands/SyncOpen.php',
+        'App\\Console\\Commands\\SyncStock' => __DIR__ . '/../..' . '/app/Console/Commands/SyncStock.php',
+        'App\\Console\\Commands\\WarningDebt' => __DIR__ . '/../..' . '/app/Console/Commands/WarningDebt.php',
+        'App\\Console\\Commands\\WarningMoney' => __DIR__ . '/../..' . '/app/Console/Commands/WarningMoney.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Customer' => __DIR__ . '/../..' . '/app/Customer.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -5450,9 +5469,9 @@ class ComposerStaticInit6558f74828bca9ebecac73d90cea4b1a
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6558f74828bca9ebecac73d90cea4b1a::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6558f74828bca9ebecac73d90cea4b1a::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit6558f74828bca9ebecac73d90cea4b1a::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit865b6f0b48d48f1fba5210e6a046ebb2::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit865b6f0b48d48f1fba5210e6a046ebb2::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit865b6f0b48d48f1fba5210e6a046ebb2::$classMap;
 
         }, null, ClassLoader::class);
     }

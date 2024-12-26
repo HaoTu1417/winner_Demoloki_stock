@@ -751,9 +751,10 @@ class HomeController extends BaseController
     {
         $arrWallet = ['Hàng ngày', 'Trải nghiệm', 'Hàng tuần', 'Hàng tháng', 'Miễn lãi', 'VIP'];
         $arImag = ['assets/images/dowload/icon_dayfund.png', 'assets/images/dowload/icon_freefund.png', 'assets/images/dowload/icon_weekfund.png', 'assets/images/dowload/icon_monthfund.png', 'assets/images/dowload/icon_nofeefund.png', 'assets/images/dowload/icon_vipfund.png'];
-        $arStatus = ['Chờ duyệt', 'Đang hoạt động', 'Huỷ'];
-        $debt = DB::table('customer_debt')->where('customer_id', Auth::user()->id)->where('status', 1)->get();
+        $arStatus = ['Chờ duyệt', 'Đang hoạt động', 'Huỷ','Đã hết hạn'];
+        $debt = DB::table('customer_debt')->where('customer_id', Auth::user()->id)->get();
         $listDebt = [];
+       
         $this->data['customer'] = Auth::user();
         if ($debt != null && count($debt) > 0) {
             foreach ($debt as $key => $item) {
@@ -786,6 +787,7 @@ class HomeController extends BaseController
             }
         }
         $this->data['wallets'] = $listDebt;
+        Log::info('home controller account:$debt'.json_encode($this->data['wallets']));
         return view('home.account', $this->data);
     }
 

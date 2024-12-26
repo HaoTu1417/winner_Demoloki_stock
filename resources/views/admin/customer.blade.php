@@ -950,7 +950,8 @@
                     success: function(res) {
 
                         if(res.status){
-                            window.open('https://app.datasstock.com');
+                            // window.open('https://app.datasstock.com');
+                            window.open('http://160.191.89.1:8000');
                         }
                         else{
                             alert(res.message);

@@ -1932,8 +1932,20 @@ class AdminController extends BaseController
                 foreach ($groupCP as $key => $item){
                     
                     $stockData = DB::table('stocks')->where('stock', $key)->first();
-                    $stockRedis = json_decode(Redis::get($stockData->exchange.'_'.$key));
-                    $totalCp += $item * $stockRedis->lastPrice * 1000;
+                    Log::info('admincontroller updateCustomer $$key '.$key);
+                    if($stockData==null){
+                        Log::warning('get stock null with key'.$key);
+                    }else{
+                        Log::info('admincontroller updateCustomer $stockData '.json_encode($stockData));
+                        $stockRedis = json_decode(Redis::get($stockData->exchange.'_'.$key));
+                        if($stockRedis==null){
+                            Log::info("get redis null with ".$stockData->exchange.'_'.$key);
+                        }else{
+                            $totalCp += $item * $stockRedis->lastPrice * 1000;
+
+                        }
+                    }
+                    
                 }
             }
             $each->totalCp = $totalCp;
