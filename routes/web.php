@@ -265,6 +265,9 @@ Route::group(['middleware' => ['user'], 'prefix'  => ''], function () {
     Route::post('/paydebt', [HomeController::class, 'paydebt'])->name('paydebt');
     Route::post('/isauto', [HomeController::class, 'isauto'])->name('isauto');
     Route::get('/getstockbyfollow', [HomeController::class, 'getstockbyfollow'])->name('getstockbyfollow');
+
+    Route::post('/cancelOrder/{id}', [HomeController::class, 'cancelOrder'])->name('cancelOrder');
+
 });
 
 Route::get('/getallstock', [HomeController::class, 'getallstock'])->name('getallstock');

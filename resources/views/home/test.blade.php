@@ -62,6 +62,56 @@
             text-overflow: ellipsis;
             color: #959595; /* Màu chữ */
         }
+
+        .content {
+            padding: 0px 20px 30px 10px;
+        }
+        .trade-item {
+            border-bottom: 1px solid #444;
+            padding: 5px 0;
+        }
+        .trade-item:last-child {
+            border-bottom: none;
+        }
+        .trade-item h3 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+        }
+        .trade-item .details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #aaa;
+        }
+        .trade-item .details .amount {
+            color: #000;
+        }
+        .cancel-btn {
+            padding: 5px 10px;
+            color: #fff;
+            background-color: #d32f2f;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            background-color: #2a2a2a;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .bottom-nav div {
+            text-align: center;
+        }
+        .bottom-nav div span {
+            display: block;
+            font-size: 12px;
+        }
 </style>
 
 
@@ -319,7 +369,36 @@
          <?= number_format($information['money']) ?>
         </div>
     </div>
-    
+    <div style="display:flex;justify-content:flex-end;margin-top:10px;padding:0 10px;align-items:center">
+         <div class="col-6" style="display:flex;align-items:center;font-weight:bold;">Các lệnh đang chờ</div>
+         <div class="col-6" style="text-align:end;padding-right:15px;font-size:18px">
+         
+        </div>
+    </div>
+<div class="content">
+   
+    @if(!empty($pendingOrders))
+        @foreach($pendingOrders as $order)
+            <div class="trade-item">
+                <h3>{{ $order->stock }}</h3>
+                <div class="details">
+                    <div>
+                        <span>Type: {{ $order->type == 1 ? 'Limit / Sell' : 'Market / Buy' }}</span><br>
+                        <span>Created At: {{ $order->created_at }}</span>
+                    </div>
+                    <div>
+                        <span>Quantity:</span> <span class="amount">{{ $order->quantity }}</span><br>
+                        <span>Price:</span> <span class="amount">{{ $order->prices }}</span>
+                    </div>
+                     <button class="cancel-btn" onclick="cancelOrder({{ $order->id }}, this)">Cancel</button>
+                </div>
+            </div>
+        @endforeach
+    @else
+        <p>No pending orders found.</p>
+    @endif
+</div>
+
     
     <!-- <div style="display:flex;justify-content:flex-end;margin-top:10px;padding:0 10px;align-items:center">-->
     <!--     <div class="col-4" style="display:flex;align-items:center;font-weight:bold;">Lệnh điều kiện</div>-->
@@ -465,6 +544,8 @@
         color: #3e4cf3;">Theo dõi</a>
         <?php } ?>
     </div>
+
+    
 </div>
 
 @endsection
@@ -699,6 +780,36 @@
             }
         })
     }
+
+    function cancelOrder(orderId, buttonElement) {
+        if (confirm("Are you sure you want to cancel this order?")) {
+            // Send an AJAX request to cancel the order
+            fetch(`/cancelOrder/${orderId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}' // Laravel's CSRF token
+                },
+                body: JSON.stringify({ id: orderId })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Remove the order from the list or update UI
+                    const tradeItem = buttonElement.closest('.trade-item');
+                    tradeItem.remove();
+                    alert("Order canceled successfully!");
+                } else {
+                    alert("Failed to cancel the order. Please try again.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("An error occurred. Please try again.");
+            });
+        }
+    }
+
     $(document).ready(function () {
         $('.btnFollow').click(function () {
             var stock = $(this).data('name');

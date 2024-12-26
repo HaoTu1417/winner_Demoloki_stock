@@ -829,8 +829,10 @@ class HomeController extends BaseController
             ->selectRaw('ifnull(sum(quantity),0) as quantity')
             ->first();
        Log::info('home controller action: '.json_encode($totalAvaiable));
-       
+       $pendingOrders = DB::table('orders')->where('status',0)->get()->toArray();
+       Log::info('$pendingOrders'.json_encode($pendingOrders));
         $this->data['quantityAvaiable'] = $totalAvaiable->quantity;
+        $this->data['pendingOrders'] = $pendingOrders;
         Log::info(' $this->data[quantityAvaiable]'. $this->data['quantityAvaiable']);
         $dataFollow = DB::table('stock_follows')->where('stock', $request->stock)->where('customer_id', Auth::user()->id)->first();
         $this->data['follow'] = $dataFollow != null ? 1 : 0;
@@ -1550,6 +1552,24 @@ class HomeController extends BaseController
         }
         return $this->success('Đơn hết hạn hoặc không tồn tại');
     }
+
+    public function cancelOrder(Request $request, $id)
+{
+    Log::info("cancelOrder for ID: " . $id);
+
+    $listOrder = DB::table('orders')->where('id', $id)->where('status', 0)->get();
+
+    if ($listOrder != null && count($listOrder) > 0) {
+        foreach ($listOrder as $item) {
+            Log::info("cancelOrder item: " . json_encode($item));
+            // Uncomment these lines to update the order status and delete related data:
+            DB::table('orders')->where('id', $item->id)->update(['status' => 2]);
+            DB::table('stock_tplus')->where('order_id', $item->id)->delete();
+        }
+    }
+
+    return response()->json(['success' => true, 'message' => 'Huỷ đơn thành công']);
+}
 
     public function support()
     {

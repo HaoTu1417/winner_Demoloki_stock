@@ -1,9 +1,10 @@
+namespace App\Console\Commands\Logs;  // Add this line
  <?php
 
 use App\Customer;
 use Illuminate\Support\Facades\Http;
 
-class Helper
+class HelperCommand
 {
     public function random_number()
     {
