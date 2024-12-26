@@ -343,12 +343,13 @@
     <div class="d-flex"
         style="height:100vh;padding:15px;background-color:#dfebfb;justify-content:flex-start;align-items:flex-start;flex-direction:column">
         <a href="{{route('accountAfter')}}" style="text-decoration:none;;background: rgb(195, 209, 251);
-    color: rgb(57, 63, 108);
-    font-weight: 500;cursor:pointer;
-    font-size: 18px;
-    padding: 6px 18px;
-    overflow: visible;width:100%;border-radius:30px">
-            Yêu cầu hợp đồng cho bạn  <i style="float:right;color:#fff;padding:6px 6px;text-align:center;font-size:14px;border-radius:50%;background:linear-gradient(0deg,#d59511,#fcec94)"  class=" bi bi-chevron-right"></i>
+            color: rgb(57, 63, 108);
+            font-weight: 500;cursor:pointer;
+            font-size: 18px;
+            padding: 6px 18px;
+            overflow: visible;width:100%;border-radius:30px">
+            Yêu cầu hợp đồng cho bạn
+            <i style="float:right;color:#fff;padding:6px 6px;text-align:center;font-size:14px;border-radius:50%;background:linear-gradient(0deg,#d59511,#fcec94)"  class=" bi bi-chevron-right"></i>
 
         </a>
         <div style="width: 100%;
@@ -375,7 +376,7 @@
                 <div>
                     <!-- <span class="card-status-enable">✅ Giao dịch</span>
                       -->
-                      <!-- <div class="<?php echo $item["id"] == 92 ? 'circle-container' : 'outlined-container'; ?>">
+                      <!-- <div class="<?php echo $item["id"] == $customer['subaccount_Id'] ? 'circle-container' : 'outlined-container'; ?>">
                       <div class="<?php echo $item["id"] == 92 ? 'outlined-circle' : 'outlined-circle'; ?>">
                         <span>Chuyển đổi giao dịch</span>
                     </div> -->
@@ -389,8 +390,8 @@
                         <span>Chuyển đổi giao dịch</span>
                     </div> -->
 
-                    <div class="<?php echo $item["id"] == 91 ? 'circle-container' : 'outlined-container'; ?>">
-                        <div class="<?php echo $item["id"] == 91 ? 'circle' : 'outlined-circle'; ?>"></div>
+                    <div class="<?php echo $customer['subaccount_Id'] !=null && $item["id"] == $customer['subaccount_Id'] ? 'circle-container' : 'outlined-container'; ?>">
+                        <div class="<?php echo $customer['subaccount_Id'] !=null && $item["id"] == $customer['subaccount_Id'] ? 'circle' : 'outlined-circle'; ?>"></div>
                         <span>Chuyển đổi giao dịch</span>
                     </div>
 

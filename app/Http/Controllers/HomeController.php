@@ -787,7 +787,7 @@ class HomeController extends BaseController
             }
         }
         $this->data['wallets'] = $listDebt;
-        Log::info('home controller account:$debt'.json_encode($this->data['wallets']));
+        Log::info('home controller account :$customer'.json_encode($this->data['customer']));
         return view('home.account', $this->data);
     }
 
@@ -818,7 +818,7 @@ class HomeController extends BaseController
     {
         
         $this->data['information'] = Auth::user();
-         Log::info('User Information:', ['information' => $this->data['information']]);
+        Log::info('User Information:', ['information' => $this->data['information']]);
         $stockData = DB::table('stocks')->where('stock', $request->stock)->first();
         $this->data['exchange'] = $stockData != null ? $stockData->exchange : '';
         $this->data['stock_info'] = $stockData != null ? $stockData->stock_info : '';
