@@ -390,9 +390,12 @@
                         <span>Chuyển đổi giao dịch</span>
                     </div> -->
 
-                    <div class="<?php echo $customer['subaccount_Id'] !=null && $item["id"] == $customer['subaccount_Id'] ? 'circle-container' : 'outlined-container'; ?>">
-                        <div class="<?php echo $customer['subaccount_Id'] !=null && $item["id"] == $customer['subaccount_Id'] ? 'circle' : 'outlined-circle'; ?>"></div>
-                        <span>Chuyển đổi giao dịch</span>
+                    <div class="<?php echo $item["enabled"] != null && $item["enabled"] == 1 ? 'circle-container' : 'outlined-container'; ?>" 
+                        onclick="handleClick('container', <?php echo $item['id']; ?>, event)">
+                        <div class="<?php echo $item["enabled"] != null && $item["enabled"] == 1 ? 'circle' : 'outlined-circle'; ?>" 
+                            onclick="handleClick('circle', <?php echo $item['id']; ?>, event)">
+                        </div>
+                        <span onclick="handleClick('span', <?php echo $item['id']; ?>, event)">Chuyển đổi giao dịch</span>
                     </div>
 
                 </div>
@@ -503,6 +506,32 @@
                 })
             }
         }
+
+    function handleClick(elementType, id, event) {
+        console.log('handleClick',id);
+            event.stopPropagation(); // Prevents bubbling up to parent elements
+            console.log(`Clicked element: ${elementType}, ID: ${id}`);
+            $.ajax({
+                    url : `/changeSubaccount/${id}`,
+                    type:'post',
+                    data:{
+                        id : id,
+                        _token: $('#csrf').val()
+                    },
+                    success: function(res){
+                        if(res.status){
+                            toastr.success(res.message);
+                            // setTimeout(() => {
+                            //     window.location.reload();
+                            // }, "2000");
+                            
+                        }
+                        else{
+                            toastr.error(res.message);
+                        }
+                    }
+                })
+    }
 </script>
 @endsection
 

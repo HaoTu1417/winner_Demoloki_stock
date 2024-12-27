@@ -267,7 +267,7 @@ Route::group(['middleware' => ['user'], 'prefix'  => ''], function () {
     Route::get('/getstockbyfollow', [HomeController::class, 'getstockbyfollow'])->name('getstockbyfollow');
 
     Route::post('/cancelOrder/{id}', [HomeController::class, 'cancelOrder'])->name('cancelOrder');
-
+    Route::post('/changeSubaccount/{id}', [HomeController::class, 'changeSubaccount'])->name('changeSubaccount');
 });
 
 Route::get('/getallstock', [HomeController::class, 'getallstock'])->name('getallstock');

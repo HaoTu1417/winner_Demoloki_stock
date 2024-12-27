@@ -66,6 +66,7 @@ class ProccessDebt extends Command
                                 'created_at' => Carbon::now(),
                                 'note' => 'Gia hạn khoản vay'
                             ]);
+                            //TODO: lãi trừ phiếu giảm giá trước.
                             DB::table('customers')->where('id', $customerData->id)->update([
                                 'money' => $afterAmount
                             ]);
