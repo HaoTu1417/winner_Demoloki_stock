@@ -198,6 +198,7 @@
     .list-cp{
         width: 100% !important;
         margin-top: 20px;
+        padding-bottom: 80px;
     }
     .item-cp{
         width: 100% !important;
@@ -409,7 +410,25 @@
                     <div >
                     <div class="flex-column">
                         <span class="label">Loại tài chính</span>
-                        <span>Hàng ngày</span>
+                        <span>
+                            <?php
+                            // Example value, you can change it dynamically
+
+                            switch ($item['type']) {
+                                case 1:
+                                    echo 'Hằng ngày';
+                                    break;
+                                case 3:
+                                    echo 'Hằng tuần';
+                                    break;
+                                case 4:
+                                    echo 'Hằng tháng';
+                                    break;
+                                default:
+                                    echo 'Không xác định'; // Default case for unsupported types
+                            }
+                            ?>
+                        </span>
                         </div>
                     </div>
                 </div>
