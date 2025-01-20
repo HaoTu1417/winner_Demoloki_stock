@@ -367,7 +367,7 @@
                 <div class="card-header-first-line">
                     <h2>Tài khoản giao dịch</h2>
                     <div class="detail">
-                    <a href="#" class="detail">Xem chi tiết</a>
+                    <a href="/subaccountdeatil/{{ $item['id'] }}" class="detail">Xem chi tiết</a>
                     </div>
                 </div>
                 <div class="card-status">
@@ -420,18 +420,22 @@
             
             </div>
     
-        <p><span>Tổng tài sản</span><span class="highlight">22.747.655</span></p>
+        <p><span>Tổng tài sản</span><span class="highlight">{{ number_format($item['total_value'], 0, ',', '.') }}</span></p>
         <p><span>Thị trường giao dịch</span><span>Cổ phiếu Việt/VND</span></p>
-        <p><span>Vốn ban đầu</span><span>{{ number_format($item['money'], 0, ',', '.') }}</span></p>
+        <p>
+            <span>Vốn ban đầu</span>
+            <span>{{ number_format($item['init_money'], 0, ',', '.') }}</span>
+        </p>
 
-        <p><span>Định vị giá thị trường</span><span>4.723.500</span></p>
-        <p><span>Cảnh báo</span><span>21.000.000</span></p>
-        <p><span>Khoảng cách cảnh báo</span><span>1.747.655</span></p>
-        <p><span>Thanh lý</span><span>20.600.000</span></p>
-        <p><span>Khoảng cách vị thế</span><span>2.147.655</span></p>
-        <p><span>Phí quản lý gia hạn</span><span>15</span></p>
-        <p><span>Tỷ lệ</span><span>10</span></p>
-        <p><span>Số dư</span><span class="highlight">18.024.155</span></p>
+        <p><span>Định vị giá thị trường</span><span>{{ number_format($item['stock_value'], 0, ',', '.') }}</span></p>
+        <p>
+            <span>Cảnh báo</span><span>{{ number_format($item['warning_line'], 0, ',', '.') }}</span></p>
+        <p><span>Khoảng cách cảnh báo</span><span>{{ number_format($item['warning_stock'], 0, ',', '.') }}</span></p>
+        <p><span>Thanh lý</span><span>{{ number_format($item['break_line'], 0, ',', '.') }}</span></p>
+        <p><span>Khoảng cách thanh lý</span><span>{{ number_format($item['break_stock'], 0, ',', '.') }}</span></p>
+        <!-- <p><span>Phí quản lý gia hạn</span><span></span></p> -->
+        <!-- <p><span>Tỷ lệ</span><span>10</span></p> -->
+        <p><span>Số dư</span><span class="highlight">{{ number_format($item['current_money'], 0, ',', '.') }}</span></p>
     </div>
 </div>
 
