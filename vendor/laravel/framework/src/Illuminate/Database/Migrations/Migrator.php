@@ -101,7 +101,7 @@ class Migrator
         // against the migrations that have already been run for this package then
         // run each of the outstanding migrations against a database connection.
         $files = $this->getMigrationFiles($paths);
-
+        
         $this->requireFiles($migrations = $this->pendingMigrations(
             $files, $this->repository->getRan()
         ));

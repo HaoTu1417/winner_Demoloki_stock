@@ -198,6 +198,7 @@
     .list-cp{
         width: 100% !important;
         margin-top: 20px;
+        padding-bottom: 80px;
     }
     .item-cp{
         width: 100% !important;
@@ -206,7 +207,134 @@
     .item-cp img{
         width: 40px;
     }
-  </style>
+    .card {
+            max-width: 400px;
+            background-color: #eef3ff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: auto;
+        }
+        .card-header{
+            background-color: #6671f8;
+        }
+        .card-header-first-line {
+           
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-header-first-line {
+            align-items: center;
+            flex-direction:row;
+        }
+        .card-header h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .card-header a {
+            text-decoration: none;
+            color: #0056b3;
+            font-size: 14px;
+        }
+        
+        .card-status-enable {
+            color: #1abc9c;
+            font-weight: bold;
+         
+        }
+        .card-body {
+            padding: 16px;
+        }
+        .card-body p {
+            margin: 8px 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        
+        .detail{
+            background: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 1));
+            border-radius:60px;
+        }
+        .detail a{
+            margin:10px;
+        }
+        .flex-column{
+            display:flex;
+            flex-direction: column;
+        }
+        .flex-row{
+            display:flex;
+            flex-direction: row;
+        }
+        .justify-space-between{
+            justify-content:space-between;
+        }
+        .label{
+            color:#959595;
+        }
+
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .circle-container {
+            display: inline-flex; /* Shrinks to fit content */
+            align-items: center;
+            background-color: #6ec2a0; /* Green background */
+            padding: 0px 20px 0px 0px;
+            border-radius: 50px; /* Rounded edges */
+            font-family: Arial, sans-serif;
+            color: white;
+            font-size: 16px;
+        }
+
+        .circle {
+            width: 24px;
+            height: 24px;
+            background-color: #5bd493; /* Match container background */
+            border-radius: 50%;
+            display: flex; /* Center content */
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 0 2px #5bd493; /* White border effect */
+            margin-right: 10px; /* Space between circle and text */
+        }
+
+        .circle::after {
+            content: '✓'; /* Checkmark */
+            font-size: 16px;
+            color: g;
+        }
+
+
+        .outlined-container {
+            display: inline-flex;
+            align-items: center;
+            padding: 0px 20px 0px 0px;
+            border-radius: 50px;
+            font-family: Arial, sans-serif;
+            color: white;
+            font-size: 16px;
+        }
+
+        .outlined-circle {
+            width: 24px;
+            height: 24px;
+            border: 2px solid white; /* White border for the circle */
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+  </style>  
 
     <div class="container homecontainer"
     style="background:#dfebfb">
@@ -214,14 +342,15 @@
        Danh sách hợp đồng
     </div>
     <div class="d-flex"
-        style="height:80vh;padding:15px;background-color:#dfebfb;justify-content:flex-start;align-items:flex-start;flex-direction:column">
+        style="height:100vh;padding:15px;background-color:#dfebfb;justify-content:flex-start;align-items:flex-start;flex-direction:column">
         <a href="{{route('accountAfter')}}" style="text-decoration:none;;background: rgb(195, 209, 251);
-    color: rgb(57, 63, 108);
-    font-weight: 500;cursor:pointer;
-    font-size: 18px;
-    padding: 6px 18px;
-    overflow: visible;width:100%;border-radius:30px">
-            Yêu cầu hợp đồng cho bạn  <i style="float:right;color:#fff;padding:6px 6px;text-align:center;font-size:14px;border-radius:50%;background:linear-gradient(0deg,#d59511,#fcec94)"  class=" bi bi-chevron-right"></i>
+            color: rgb(57, 63, 108);
+            font-weight: 500;cursor:pointer;
+            font-size: 18px;
+            padding: 6px 18px;
+            overflow: visible;width:100%;border-radius:30px">
+            Yêu cầu hợp đồng cho bạn
+            <i style="float:right;color:#fff;padding:6px 6px;text-align:center;font-size:14px;border-radius:50%;background:linear-gradient(0deg,#d59511,#fcec94)"  class=" bi bi-chevron-right"></i>
 
         </a>
         <div style="width: 100%;
@@ -231,60 +360,104 @@
     display: flex;
     float: inline-end;flex-direction:column;">Phí quản lý: <?= number_format($customer['fee_manager']) ?><br><span style="color:#333;font-size:10px">(Phi quản lý là phí có thể sử dụng thay thế tiền để gia hạn hợp đồng)</span></div>
         <div class="list-cp list-cp-viet">
-                        
+     
                         <?php if($wallets != null && count($wallets) > 0){ 
                                 foreach($wallets as $item) { ?>
-                                    <div class="item-data" style="border: 1px solid #ccc; background-color:#fff; border-radius:8px; margin-bottom: 10px">
-                                        <div class="item-cp js-item-data" style="display:flex;justify-content:space-between;align-items:center; margin: 0; background-color:#fff">
-                                            <img src="<?= $item['image'] ?>">
-                                            <a href="javascript:;" style="text-decoration:none;margin-left:8px; min-width:200px">
-                                                <p style="margin-bottom:4px;font-size:18px;font-weight:bold">Hợp đồng: <?=  $item['name'] ?></p>
-                                                <span style="width: auto;
-                    white-space: normal;">
-                                                    Số tiền: <?= number_format($item['money']) ?>
-                                                </span>
-                                                
-                                            </a>
-                                            <i class="bi bi-chevron-right" style="font-size:18px;font-weight:bold"></i>
-                                            
-                                        </div>
-                                        <div class="detail-info" style="padding:8px;border-bottom:1px solid #ccc;border-radius:8px;display:none">
-                                            <div class="" style="width:100%;display:flex;justify-content:space-between">
-                                                <div style="background-color:#f3f6f9;padding:15px;border-radius:4px 8px;width:100%;display:flex;flex-direction:column;justify-content:space-between">
-                                                    <div style="display:flex;justify-content:space-between;width:100%">
-                                                        <span style="color:#333">Thời gian GD</span>
-                                                        <div style="color:black;font-weight:bold"><?= $item['next_at'] ?> đên <?= \Carbon\Carbon::parse($item['next_at'])->addDays($item['exp_daynum'])->format("d-m-Y") ?></div>
-                                                    </div>
-                                                    <div style="display:flex;justify-content:space-between;width:100%">
-                                                        <span style="color:#333">Lãi suất</span>
-                                                        <div style="color:black;font-weight:bold"><?= $item['percent'] ?>%</div>
-                                                    </div>
-                                                    <div style="display:flex;justify-content:space-between;width:100%">
-                                                        <span style="color:#333">Số tiền cọc</span>
-                                                        <div style="color:black;font-weight:bold"><?= number_format($item['deposit']) ?></div>
-                                                    </div>
-                                                    <div style="display:flex;justify-content:space-between;width:100%">
-                                                        <span style="color:#333">Số tiền vay</span>
-                                                        <div style="color:black;font-weight:bold"><?= number_format($item['money']) ?></div>
-                                                    </div>
-                                                    <div style="display:flex;justify-content:space-between;width:100%">
-                                                        <span style="color:#333">Trạng thái</span>
-                                                        <div style="color:black;font-weight:bold"><?= $item['status_name'] ?></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <?php if($item['status'] == 1){ 
-                                                if($item['type'] != 5 && $item['type'] != 2){ ?>
-                                                    <!--<div class=" mt-2" style="width:100%">-->
-                                                    <!--    <a style="width: 100%;font-size:14px" onclick="isAuto(<?= $item['id'] ?>,<?= $item['is_auto'] == 1 ? 0 : 1 ?>)" class="btn btn-<?= $item['is_auto'] == 1 ? 'danger' : 'success' ?>"><?= $item['is_auto'] == 1 ? 'Tắt gia hạn tự động' : 'Bật gia hạn tự động' ?></a>-->
-                                                    <!--</div>-->
-                                                <?php } ?>
-                                                <div class=" mt-2" style="width:100%">
-                                                    <a style="width: 100%;font-size:14px" onclick="payDebt(<?= $item['id'] ?>)" class="btn btn-danger">Thu hồi hợp đồng</a>
-                                                </div>
-                                            <?php } ?>
-                                        </div>
-                                    </div>
+                                      <div class="card">
+            <div class="card-header">
+                <div class="card-header-first-line">
+                    <h2>Tài khoản giao dịch</h2>
+                    <div class="detail">
+                    <a href="/subaccountdeatil/{{ $item['id'] }}" class="detail">Xem chi tiết</a>
+                    </div>
+                </div>
+                <div class="card-status">
+                    <span>{{ $item['id'] }}(Giao dịch)</span>
+                </div>
+                <div>
+                    <!-- <span class="card-status-enable">✅ Giao dịch</span>
+                      -->
+                      <!-- <div class="<?php echo $item["id"] == $customer['subaccount_Id'] ? 'circle-container' : 'outlined-container'; ?>">
+                      <div class="<?php echo $item["id"] == 92 ? 'outlined-circle' : 'outlined-circle'; ?>">
+                        <span>Chuyển đổi giao dịch</span>
+                    </div> -->
+                    <!-- <div class="circle-container">
+                        <div class="circle"></div>
+                        <span>Chuyển đổi giao dịch</span>
+                                </div> -->
+
+                    <!-- <div class="outlined-container">
+                        <div class="outlined-circle"></div>
+                        <span>Chuyển đổi giao dịch</span>
+                    </div> -->
+
+                    <div class="<?php echo $item["enabled"] != null && $item["enabled"] == 1 ? 'circle-container' : 'outlined-container'; ?>" 
+                        onclick="handleClick('container', <?php echo $item['id']; ?>, event)">
+                        <div class="<?php echo $item["enabled"] != null && $item["enabled"] == 1 ? 'circle' : 'outlined-circle'; ?>" 
+                            onclick="handleClick('circle', <?php echo $item['id']; ?>, event)">
+                        </div>
+                        <span onclick="handleClick('span', <?php echo $item['id']; ?>, event)">Chuyển đổi giao dịch</span>
+                    </div>
+
+                </div>
+                <div style="" class="flex-row justify-space-between">
+                    <div >
+                        <div class="flex-column">
+                        <span class="label">Thời gian giao dịch</span>
+                        <div style="color:black;font-weight:bold">{{ $item['next_at'] }} đến {{ \Carbon\Carbon::parse($item['next_at'])->addDays($item['exp_daynum'])->format('d-m-Y') }}</div>
+                        </div>
+                    </div>
+                    <div >
+                    <div class="flex-column">
+                        <span class="label">Loại tài chính</span>
+                        <span>
+                            <?php
+                            // Example value, you can change it dynamically
+
+                            switch ($item['type']) {
+                                case 1:
+                                    echo 'Hằng ngày';
+                                    break;
+                                case 3:
+                                    echo 'Hằng tuần';
+                                    break;
+                                case 4:
+                                    echo 'Hằng tháng';
+                                    break;
+                                default:
+                                    echo 'Không xác định'; // Default case for unsupported types
+                            }
+                            ?>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        <div class="card-body">
+        <div>
+            
+            </div>
+    
+        <p><span>Tổng tài sản</span><span class="highlight">{{ number_format($item['total_value'], 0, ',', '.') }}</span></p>
+        <p><span>Thị trường giao dịch</span><span>Cổ phiếu Việt/VND</span></p>
+        <p>
+            <span>Vốn ban đầu</span>
+            <span>{{ number_format($item['init_money'], 0, ',', '.') }}</span>
+        </p>
+
+        <p><span>Định vị giá thị trường</span><span>{{ number_format($item['stock_value'], 0, ',', '.') }}</span></p>
+        <p>
+            <span>Cảnh báo</span><span>{{ number_format($item['warning_line'], 0, ',', '.') }}</span></p>
+        <p><span>Khoảng cách cảnh báo</span><span>{{ number_format($item['warning_stock'], 0, ',', '.') }}</span></p>
+        <p><span>Thanh lý</span><span>{{ number_format($item['break_line'], 0, ',', '.') }}</span></p>
+        <p><span>Khoảng cách thanh lý</span><span>{{ number_format($item['break_stock'], 0, ',', '.') }}</span></p>
+        <!-- <p><span>Phí quản lý gia hạn</span><span></span></p> -->
+        <!-- <p><span>Tỷ lệ</span><span>10</span></p> -->
+        <p><span>Số dư</span><span class="highlight">{{ number_format($item['current_money'], 0, ',', '.') }}</span></p>
+    </div>
+</div>
+
                         <?php } } ?>
                     </div>
     </div>
@@ -356,6 +529,32 @@
                 })
             }
         }
+
+    function handleClick(elementType, id, event) {
+        console.log('handleClick',id);
+            event.stopPropagation(); // Prevents bubbling up to parent elements
+            console.log(`Clicked element: ${elementType}, ID: ${id}`);
+            $.ajax({
+                    url : `/changeSubaccount/${id}`,
+                    type:'post',
+                    data:{
+                        id : id,
+                        _token: $('#csrf').val()
+                    },
+                    success: function(res){
+                        if(res.status){
+                            toastr.success(res.message);
+                            // setTimeout(() => {
+                            //     window.location.reload();
+                            // }, "2000");
+                            
+                        }
+                        else{
+                            toastr.error(res.message);
+                        }
+                    }
+                })
+    }
 </script>
 @endsection
 

@@ -51,6 +51,118 @@ class HomeController extends BaseController
 
     }
 
+    public function subaccountDetail(Request $request, $id)
+    {
+        $account = DB::table('customer_debt')->where('id', $id)->first();
+
+       
+
+        try {
+            $results = DB::table('orders AS t')
+            ->leftJoin('stocks AS s', 't.stock', '=', 's.stock')
+            ->select(
+                't.subaccount_Id',
+                't.stock AS stock_name',
+                DB::raw('SUM(t.quantity) AS total_quantity'),
+                's.lastPrice',
+                DB::raw('SUM(t.quantity) * s.lastPrice AS total_value')
+            )
+            ->where('t.subaccount_Id', $account->id)
+            ->groupBy('t.subaccount_Id', 't.stock', 's.lastPrice')
+            ->get();
+
+            // Calculate the grand total of all total_value
+            $grandTotal = $results->sum('total_value') * 1000;
+    
+            // Return the results as JSON
+            Log::info([
+                'success' => true,
+                'data' => json_encode($results),
+                '$grandTotal'=>$grandTotal,
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Error retrieving stock details: ' . $e->getMessage(),
+            ], 500);
+        }
+
+        $total_value = $grandTotal + $account->current_money + $account->deposit; 
+        $warning_distance =  $total_value- $account->warning_line;
+        $break_distance = $total_value - $account->break_line;
+        $init_money = $account->deposit + $account->money;
+
+
+        $this->data['stock_value'] = $grandTotal;
+        $init_money = $account->deposit + $account->money;
+        $this->data['id'] = $id;
+        $this->data['account'] = $account;
+        $this->data['warning'] = $account->warning_line;
+        $this->data['liquity'] = $account->break_line;
+        $this->data['type'] = $account->type;
+        $this->data['init_money']=$init_money;
+        $this->data['total_value'] = $total_value;
+        $this->data['warning_distance']= $warning_distance;
+        $this->data['break_distance'] = $break_distance;
+
+
+
+
+        // $total_value = $grandTotal + $item->current_money + $item->deposit; 
+        // $warning_line =  $total_value- $item->warning_line;
+        // $break_line = $total_value - $item->break_line;
+        // 
+        
+        // Log::info('$item'.json_encode($item));
+        // array_push($listDebt, [
+        //     'id' => $item->id,
+        //     'type' => $item->type,
+        //     'name' => $arrWallet[$item->type - 1],
+        //     'image' => $arImag[$item->type - 1],
+        //     'deposit' => $item->deposit,
+        //     'money' => $item->money,
+        //     'created_at' => Carbon::parse($item->created_at)->format('d-m-Y'),
+        //     'next_at' => Carbon::parse($item->next_at)->format('d-m-Y'),
+        //     'exp_day' => $expDay,
+        //     'exp_daynum' => $item->exp_day,
+        //     'percent' => $item->percent,
+        //     'is_auto' => $item->is_auto,
+        //     'status_name' => $arStatus[$item->status],
+        //     'status' => $item->status,
+        //     'enabled'=> $item->enabled,
+        //     'warning_line' => $item->warning_line,
+        //     'break_line' => $item->break_line,
+        //     'current_money' => $item->current_money,
+        //     'stock_value'=>$grandTotal,
+        //     'warning_stock' =>$warning_line ,
+        //     'break_stock' =>$break_line,
+        //     'init_money' => $init_money,
+        //     'total_value'=> $total_value,
+
+        // ]);
+
+
+        
+        return view('home.subaccountDetail',$this->data);
+    }
+
+    public function subaccountHistory(Request $request, $id)
+    {
+
+        $historyOrders = DB::table('historys')
+        ->where('subaccount_Id', $id)
+        ->whereIn('type', [2, 3])
+        ->get()
+        ->toArray();
+
+        // return response()->json([
+        //     'success' => false,
+        //     'message' => json_encode($historyOrders),
+        // ], 500);
+        $this->data['historyOrders'] = $historyOrders;
+      Log::info('history orders 11123'.json_encode($historyOrders).'$id'.$id);
+      return view('home.subaccounthistory',$this->data);
+    }
     public function setlang(Request $request)
     {
         session(['googtrans' => '/vi/' . $request->lang]);
@@ -127,7 +239,7 @@ class HomeController extends BaseController
             ->whereRaw('status <= 1')
             ->first();
         if ($checkDebt != null) {
-            return $this->error('Bạn đang có khoản vay rồi');
+            // return $this->error('Bạn đang có khoản vay rồi');
         }
         if ($request->percent < 2 || $request->percent > 10) {
             return $this->error('Vui lòng chọn tỷ lệ');
@@ -170,7 +282,8 @@ class HomeController extends BaseController
             'percent' => $percentApply,
             'is_auto' => $statusAuto,
             'note' => '',
-            'status' => 0
+            'status' => 0,
+            'current_money'=>$amount * $request->percent
         ]);
         $beforeAmount = $customerData->money;
         $afterAmount = $customerData->money - $amount;
@@ -241,7 +354,8 @@ class HomeController extends BaseController
             'percent' => $percentApply,
             'is_auto' => $statusAuto,
             'note' => '',
-            'status' => 0
+            'status' => 0,
+            'current_money'=>$amount * $request->percent
         ]);
         $beforeAmount = $customerData->money;
         $afterAmount = $customerData->money - $amount;
@@ -336,7 +450,8 @@ class HomeController extends BaseController
             'percent' => $percentApply,
             'is_auto' => $statusAuto,
             'note' => '',
-            'status' => 0
+            'status' => 0,
+            'current_money'=>$amount * $request->percent
         ]);
         $beforeAmount = $customerData->money;
         $afterAmount = $customerData->money - $amount;
@@ -404,7 +519,8 @@ class HomeController extends BaseController
             'percent' => $percentApply,
             'is_auto' => $statusAuto,
             'note' => '',
-            'status' => 0
+            'status' => 0,
+            'current_money'=>$amount * $request->percent
         ]);
         $beforeAmount = $customerData->money;
         $afterAmount = $customerData->money - $amount;
@@ -453,12 +569,13 @@ class HomeController extends BaseController
         if ($percentByLevel == null) {
             return $this->error('Không có gói vay hợp lệnh');
         }
+        //TODO: chỉ có một loại lãi xuất được áp dụng.
         $percentApply = $this->getpercent($percentByLevel, 12);
         if ($percentApply == 0) {
             return $this->error('Không có gói vay hợp lệnh');
         }
         $totalInterest = $amount * $request->month;
-           $statusAuto = 0;
+        $statusAuto = 0;
         if(Auth::user()->fee_manager > ($amount * $request->percent) || Auth::user()->money > ($amount * $request->percent)){
             $statusAuto = 1;
         }
@@ -473,7 +590,8 @@ class HomeController extends BaseController
             'percent' => $percentApply,
             'is_auto' => $statusAuto,
             'note' => '',
-            'status' => 0
+            'status' => 0,
+            'current_money'=>$amount * $request->percent
         ]);
         $beforeAmount = $customerData->money;
         $afterAmount = $customerData->money - $amount;
@@ -751,10 +869,12 @@ class HomeController extends BaseController
     {
         $arrWallet = ['Hàng ngày', 'Trải nghiệm', 'Hàng tuần', 'Hàng tháng', 'Miễn lãi', 'VIP'];
         $arImag = ['assets/images/dowload/icon_dayfund.png', 'assets/images/dowload/icon_freefund.png', 'assets/images/dowload/icon_weekfund.png', 'assets/images/dowload/icon_monthfund.png', 'assets/images/dowload/icon_nofeefund.png', 'assets/images/dowload/icon_vipfund.png'];
-        $arStatus = ['Chờ duyệt', 'Đang hoạt động', 'Huỷ'];
-        $debt = DB::table('customer_debt')->where('customer_id', Auth::user()->id)->where('status', 1)->get();
+        $arStatus = ['Chờ duyệt', 'Đang hoạt động', 'Huỷ','Đã hết hạn'];
+        $debt = DB::table('customer_debt')->where('customer_id', Auth::user()->id)->orderBy('enabled', 'desc')->get();
         $listDebt = [];
+       
         $this->data['customer'] = Auth::user();
+        Log::info('---------');
         if ($debt != null && count($debt) > 0) {
             foreach ($debt as $key => $item) {
                 $expDay = "";
@@ -767,6 +887,42 @@ class HomeController extends BaseController
                 } else if ($item->type == 5) {
                     $expDay = 'Miễn phí giao dịch';
                 }
+
+                try {
+                    $results = DB::table('orders AS t')
+                    ->leftJoin('stocks AS s', 't.stock', '=', 's.stock')
+                    ->select(
+                        't.subaccount_Id',
+                        't.stock AS stock_name',
+                        DB::raw('SUM(t.quantity) AS total_quantity'),
+                        's.lastPrice',
+                        DB::raw('SUM(t.quantity) * s.lastPrice AS total_value')
+                    )
+                    ->where('t.subaccount_Id', $item->id)
+                    ->groupBy('t.subaccount_Id', 't.stock', 's.lastPrice')
+                    ->get();
+
+                    // Calculate the grand total of all total_value
+                    $grandTotal = $results->sum('total_value') * 1000;
+            
+                    // Return the results as JSON
+                    Log::info([
+                        'success' => true,
+                        'data' => json_encode($results),
+                        '$grandTotal'=>$grandTotal,
+                    ]);
+                } catch (\Exception $e) {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Error retrieving stock details: ' . $e->getMessage(),
+                    ], 500);
+                }
+                $total_value = $grandTotal + $item->current_money + $item->deposit; 
+                $warning_line =  $total_value- $item->warning_line;
+                $break_line = $total_value - $item->break_line;
+                $init_money = $item->deposit + $item->money;
+                
+                Log::info('$item'.json_encode($item));
                 array_push($listDebt, [
                     'id' => $item->id,
                     'type' => $item->type,
@@ -781,7 +937,17 @@ class HomeController extends BaseController
                     'percent' => $item->percent,
                     'is_auto' => $item->is_auto,
                     'status_name' => $arStatus[$item->status],
-                    'status' => $item->status
+                    'status' => $item->status,
+                    'enabled'=> $item->enabled,
+                    'warning_line' => $item->warning_line,
+                    'break_line' => $item->break_line,
+                    'current_money' => $item->current_money,
+                    'stock_value'=>$grandTotal,
+                    'warning_stock' =>$warning_line ,
+                    'break_stock' =>$break_line,
+                    'init_money' => $init_money,
+                    'total_value'=> $total_value,
+
                 ]);
             }
         }
@@ -816,11 +982,9 @@ class HomeController extends BaseController
     {
         
         $this->data['information'] = Auth::user();
-         Log::info('User Information:', ['information' => $this->data['information']]);
         $stockData = DB::table('stocks')->where('stock', $request->stock)->first();
         $this->data['exchange'] = $stockData != null ? $stockData->exchange : '';
         $this->data['stock_info'] = $stockData != null ? $stockData->stock_info : '';
-        Log::info('home controller action stockData'.json_encode($stockData));
         $totalAvaiable = DB::table('stock_tplus')
             ->where('customer_id', Auth::user()->id)
             ->where('stock', $request->stock)
@@ -828,23 +992,21 @@ class HomeController extends BaseController
             ->whereRaw('((type = 1 and t >= 3) or type = 2)')
             ->selectRaw('ifnull(sum(quantity),0) as quantity')
             ->first();
-       Log::info('home controller action: '.json_encode($totalAvaiable));
        $pendingOrders = DB::table('orders')->where('status',0)->get()->toArray();
-       Log::info('$pendingOrders'.json_encode($pendingOrders));
         $this->data['quantityAvaiable'] = $totalAvaiable->quantity;
         $this->data['pendingOrders'] = $pendingOrders;
-        Log::info(' $this->data[quantityAvaiable]'. $this->data['quantityAvaiable']);
         $dataFollow = DB::table('stock_follows')->where('stock', $request->stock)->where('customer_id', Auth::user()->id)->first();
         $this->data['follow'] = $dataFollow != null ? 1 : 0;
         $this->data['az'] = range('A', 'Z');
         $this->data['stock'] = $request->stock;
-        Log::info('home controller action data'.json_encode($this->data));
         //echo '<p>Hello World</p>';
        // lay het hop dong ra
        $listDebt = DB::table('customer_debt')->where('customer_id', Auth::user()->id)->get()->toArray();
        //$pendingOrders = DB::table('orders')->where('status',0)->get()->toArray();
        //  $query = DB::table('stock_tplus')->where('customer_id', Auth::user()->id)->get();
-        $this->data['listDebt'] = $listDebt;
+       $this->data['debtFunds'] = DB::table('customer_debt')->where('id', Auth::user()['subaccount_Id'])->get()->first();
+        // Log::info('$this->data[\'debtFunds\']'.json_encode($this->data['debtFunds']).' '. Auth::user()['subaccount_Id']); 
+    //    $this->data['listDebt'] = $listDebt;
         return view('home.test', $this->data);
     }
 
@@ -861,7 +1023,7 @@ class HomeController extends BaseController
     }
     public function agency()
     {
-        $query = DB::table('stock_tplus')->where('customer_id', Auth::user()->id)->get();
+        $query = DB::table('stock_tplus')->where('subaccount_Id', Auth::user()->subaccount_Id)->get();
         $dataStock = collect($query);
         $groupCP = $dataStock->groupBy('stock')->map(function ($group) {
             return $group->sum('quantity');
@@ -915,6 +1077,7 @@ class HomeController extends BaseController
         // dd($listReport);
         $this->data['listStock'] = $listReport;
         $this->data['page'] = 'agency';
+        Log::info('home controller agency listReport'.json_encode($listReport).' count($groupCP)'.count($groupCP));
         return view('home.agency', $this->data);
     }
 
@@ -1574,6 +1737,107 @@ class HomeController extends BaseController
     return response()->json(['success' => true, 'message' => 'Huỷ đơn thành công']);
 }
 
+    public function expandsubaccount(Request $request, $id)
+    {
+        
+        $this->data['subaccount'] = DB::table('customer_debt')->where('id', $id)->first();
+        Log::info('expandsubaccount'.json_encode($this->data['subaccount']));
+        return view('home.expandsubaccount', $this->data);
+    }
+
+    public function processexpandsubaccount(Request $request)
+    {
+        
+       
+            // Retrieve data from the request
+            $additionalDeposit = $request->input('additionalDeposit');
+            $newLimit = $request->input('newLimit');
+            $managementFee = $request->input('managementFee');
+            $totalAmount = $request->input('totalAmount');
+
+            // Log the received data for debugging
+            Log::info('Received expandsubaccount data', [
+                'additionalDeposit' => $additionalDeposit,
+                'newLimit' => $newLimit,
+                'managementFee' => $managementFee,
+                'totalAmount' => $totalAmount,
+            ]);
+             
+            // Input data validation
+            $customerData = DB::table('customers')->where('id', Auth::user()->id)->first();
+            if ($additionalDeposit > $customerData->money) {
+                return $this->error('Số dư không đủ để cọc');
+            }
+
+            
+            $subaccount_Id = $request->input('subaccountId');;
+            $customerDebtData = DB::table('customer_debt')->where('id', $subaccount_Id)->first();
+            if($customerDebtData==null){
+                return $this->error('Không tìm thấy tài khoản giao dịch');
+            }
+            $additionalAmount = $request->input('additionalAmount');
+            if($additionalAmount <= 0)
+            {
+                return $this->error('Số tiền mở rộng không hợp lệ');
+            }
+
+            // end Input data validation
+
+            // Handle new amount value
+            $beforeAmount = $customerData->money;
+            $afterAmount = $customerData->money - $additionalDeposit;
+           
+
+            $beforeDeposit = $customerDebtData->deposit;
+            $beforeMoney = $customerDebtData->money;
+            $beforeCurrentMoney = $customerDebtData->current_money;
+            $afterDeposit = $customerDebtData->deposit +$additionalDeposit;
+            $afterMoney = $customerDebtData->money +  $additionalAmount;
+            $afterCurrentMoney =  $beforeCurrentMoney + $additionalAmount;
+
+
+            // update to db.
+            //TODO: rollback when transaction failed
+        
+            DB::table('customer_debt')->where('id', $subaccount_Id)->update([
+                'money' => $afterMoney,
+                'deposit' => $afterDeposit,
+                'current_money'=> $afterCurrentMoney
+            ]);
+            DB::table('historys')->insert([
+                'customer_id' => $customerData->id,
+                'befores' => $beforeAmount,
+                'money' => $additionalAmount,
+                'afters' => $afterAmount,
+                'created_at' => Carbon::now(),
+                'note' => 'Đặt cọc mở rộng tài khoản',
+                'note_trans'=>"扩大账号押金",
+                'subaccount_Id'=>$subaccount_Id
+            ]);
+    
+            DB::table('customers')->where('id', $customerData->id)->update([
+                'money' => $afterAmount
+            ]);
+
+            
+
+            // Return a response (JSON or view)
+            return response()->json([
+                'status' => true,
+                'message' => 'Data processed successfully',
+                'data' => [
+                    'additionalDeposit' => $additionalDeposit,
+                    'newLimit' => $newLimit,
+                    'managementFee' => $managementFee,
+                    'totalAmount' => $totalAmount,
+                    'additionalAmount' => $additionalAmount,
+                    'subaccountId'=>$subaccount_Id
+                ]
+            ]);
+
+           
+    }
+
     public function support()
     {
         $this->data['livechat'] = DB::table('settings')->where('setting_key', 'livechat')->first()->setting_value;
@@ -1621,6 +1885,7 @@ class HomeController extends BaseController
             )
         );
     }
+
 
     public function history_play()
     {
@@ -1702,21 +1967,30 @@ class HomeController extends BaseController
     {
         $data = [];
         if (empty($request->stock)) {
-            $data = DB::table('orders')
-                ->where('customer_id', Auth::user()->id)
+            // $data = DB::table('orders')
+            //     ->where('customer_id', Auth::user()->id)
+            //     ->skip($request->offset)
+            //     ->orderByDesc('id')
+            //     ->take(10)
+            //     ->get();
+
+                $data = DB::table('orders')
+                ->where('subaccount_id', Auth::user()->subaccount_Id)
                 ->skip($request->offset)
                 ->orderByDesc('id')
                 ->take(10)
                 ->get();
+
         } else {
             $data = DB::table('orders')
-                ->where('customer_id', Auth::user()->id)
+                ->where('subaccount_id', Auth::user()->subaccount_Id)
                 ->where('stock', $request->stock)
                 ->orderByDesc('id')
                 ->skip($request->offset)
                 ->take(10)
                 ->get();
         }
+        Log::info('Home controller historyOrder $data'.json_encode($data));
         return $this->data($data);
     }
 
@@ -2254,6 +2528,7 @@ class HomeController extends BaseController
 
         $totalFeeF0 = Auth::user()->fee;
 
+        // cộng phí giao dịch cho người giới thiệu (đại lý)
         if ($totalFeeF0 > 0 && $customerData->role == 0) {
             $customerF0 = Customer::find($customerData->getRoot()->id);
             $feeMoney = $totalAmount * $totalFeeF0 / 100;
@@ -2273,14 +2548,28 @@ class HomeController extends BaseController
                 'money' => $afterAmountF0
             ]);
         }
+        $currentSubaccount = DB::table('customer_debt')->where('id', Auth::user()['subaccount_Id'])->get()->first();
 
-        if ($totalAmount + $totalFee > $customerData->money) {
+        //chưa chọn hoặc không hề có tài khoản con
+        if(Auth::user()['subaccount_Id']==null){
+
+            Log::info('sub account not found in customer information with id: '.Auth::user()['subaccount_Id']);
+            return $this->error('Không tìm thấy tài khoản giao dịch, Vui lòng chọn hoặc tạo mới!');
+        }
+
+        // tài khoản con bị xoá hoặc Id của tài khoản con bị xoá, cái này vận hành bình thường
+        // sẽ không xảy ra
+        if($currentSubaccount==null){
+            Log::info('sub account not found with id: '.Auth::user()['subaccount_Id']);
+            return $this->error('Không tìm thấy tài khoản giao dịch, Vui lòng chọn hoặc tạo mới!');
+        }
+        if ($totalAmount + $totalFee > $currentSubaccount->current_money) {
             Log::info('$customerData->money'.$customerData->money);
             return $this->error('Số dư ví không đủ để giao dịch');
         }
 
-        $beforeAmount = $customerData->money;
-        $afterAmount = $customerData->money - ($totalAmount + $totalFee);
+        $beforeAmount = $currentSubaccount->current_money;
+        $afterAmount = $currentSubaccount->current_money - ($totalAmount + $totalFee);
 
         $id = DB::table('orders')->insertGetId([
             'customer_id' => $customerData->id,
@@ -2291,7 +2580,8 @@ class HomeController extends BaseController
             'prices' => $amount,
             'fee' => $totalFee,
             'status' => $amount >= $stockRedis->lastPrice * 1000 ? 1 : 0,
-            'match_at' => Carbon::now()
+            'match_at' => Carbon::now(),
+            'subaccount_Id'=>Auth::user()['subaccount_Id'],
         ]);
         DB::table('historys')->insert([
             'customer_id' => $customerData->id,
@@ -2300,7 +2590,8 @@ class HomeController extends BaseController
             'afters' => $afterAmount,
             'created_at' => Carbon::now(),
             'note' => 'Mua ' . number_format($quantity) . ' cổ phiếu ' . $stockData->stock, // Translated to Vietnamese
-            'note_trans' => '购买 ' . number_format($quantity) . ' 股票 ' . $stockData->stock . ' ' . number_format($amount) // Bản dịch sang tiếng Trung giản thể
+            'note_trans' => '购买 ' . number_format($quantity) . ' 股票 ' . $stockData->stock . ' ' . number_format($amount), // Bản dịch sang tiếng Trung giản thể
+            'subaccount_Id'=>Auth::user()['subaccount_Id'],
         ]);
         DB::table('stock_tplus')->insert([
             'order_id' => $id,
@@ -2312,7 +2603,8 @@ class HomeController extends BaseController
             'price' => $amount,
             't' => 0,
             'calculate_at' => Carbon::now(),
-            'status' => $amount >= $stockRedis->lastPrice * 1000 ? 1 : 0
+            'status' => $amount >= $stockRedis->lastPrice * 1000 ? 1 : 0,
+            'subaccount_id'=>Auth::user()['subaccount_Id']
         ]);
         if ($amount >= $stockRedis->lastPrice * 1000) {
             $customerParentId = $customerData->getRoot()->id;
@@ -2332,6 +2624,10 @@ class HomeController extends BaseController
 
         DB::table('customers')->where('id', $customerData->id)->update([
             'money' => $afterAmount
+        ]);
+
+        DB::table('customer_debt')->where('id', Auth::user()['subaccount_Id'])->update([
+            'current_money' => $afterAmount
         ]);
 
         return $this->success('Đặt lệnh thành công');
@@ -2605,5 +2901,29 @@ class HomeController extends BaseController
         ]);
         return $this->error('Rút lãi thành công');
     }
-
+    public function changeSubaccount(Request $request){
+        Log::info('home controller changeSubaccount $request'.$request->id);
+        $selectedSubaccount =  DB::table('customer_debt')->where('id', $request->id)->first();
+        Log::info('home controller changeSubaccount $selectedSubaccount'.json_encode($selectedSubaccount));
+        $curentSubaccount = DB::table('customer_debt')->where('id', Auth::user()->subaccount_Id)->first();
+        if($curentSubaccount!=null){
+            Log::info('home controller changeSubaccount $curentSubaccount'.json_encode($curentSubaccount));
+            //cap nhat trang thai enable của tai khoan dang chon
+            DB::table('customer_debt')->where('id', $curentSubaccount->id)->update([
+                'enabled' => 0,
+            ]);
+        }
+      
+        // cap nhat trang thai enable cua tai khoan moi
+        DB::table('customer_debt')->where('id', $selectedSubaccount->id)->update([
+            'enabled' => 1,
+        ]);
+        
+        // cap nhat subAccount_id trong customer
+        DB::table('customers')->where('id', Auth::user()->id)->update([
+            'subaccount_Id' => $selectedSubaccount->id,
+        ]);
+        Log::info('home controller changeSubaccount $subaccount_Id'.$selectedSubaccount->id);
+        return $this->success('Thay đổi tài khoản giao dịch thành công');
+    }
 }

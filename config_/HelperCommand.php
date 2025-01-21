@@ -1,4 +1,4 @@
-namespace App\Console\Commands\Logs;  // Add this line
+
  <?php
 
 use App\Customer;
