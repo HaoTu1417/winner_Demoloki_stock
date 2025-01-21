@@ -9,15 +9,25 @@
         .card-header h1, .card-header h2 {
             font-size: 1.5rem; /* Responsive font size for mobile */
         }
+        .back-button {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
     </style>
 </head>
 <body>
     <div class="container mt-4">
         <div class="card">
-            <div class="card-header text-center bg-primary text-white">
+        <div class="card-header text-center bg-primary text-white position-relative">
+                <a href="javascript:history.back()" class="back-button">&#8592;</a>
                 <h5 class="mb-2">Chi tiết tài khoản</h5>
                 <h2><strong>Tổng tài sản (VND)</strong></h2>
-                <h1 class="mt-2"><strong>44.997.569</strong></h1>
+                <h1 class="mt-2"><strong>{{ number_format($total_value, 0, ',', '.') }}</strong></h1>
             </div>
 
             <div class="card-body">
@@ -30,15 +40,33 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6 mt-3 mt-md-0">
-                        <h6 class="text-muted">Thời gian giao dịch</h6>
-                        <strong></strong>
+                        <!-- <h6 class="text-muted">Thời gian giao dịch</h6>
+                        <strong></strong> -->
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <div class="col-12 col-md-6">
                         <h6 class="text-muted">Loại tài chính</h6>
-                        <strong></strong>
+                        <strong>
+                            <?php
+                                $type = 1; // Example value, you can change it dynamically
+
+                                switch ($type) {
+                                    case 1:
+                                        echo 'Hằng ngày';
+                                        break;
+                                    case 3:
+                                        echo 'Hằng tuần';
+                                        break;
+                                    case 4:
+                                        echo 'Hằng tháng';
+                                        break;
+                                    default:
+                                        echo 'Không xác định'; // Default case for unsupported types
+                                }
+                            ?>
+                        </strong>
                     </div>
                     <div class="col-12 col-md-6 mt-3 mt-md-0">
                         <h6 class="text-muted">Thị trường giao dịch</h6>
@@ -49,55 +77,55 @@
                 <div class="row mb-3">
                     <div class="col-12 col-md-6">
                         <h6 class="text-muted">Vốn ban đầu</h6>
-                        <strong>{{ number_format($account->money, 0, ',', '.') }}</strong>
+                        <strong>{{ number_format($init_money, 0, ',', '.') }}</strong>
                     </div>
                     <div class="col-12 col-md-6 mt-3 mt-md-0">
                         <h6 class="text-muted">Định vị giá thị trường</h6>
-                        <strong></strong>
+                        <strong>{{ number_format($stock_value, 0, ',', '.') }}</strong>
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <div class="col-12 col-md-6">
                         <h6 class="text-muted">Cảnh báo</h6>
-                        <strong>{{$warning}}</strong>
+                        <strong>{{ number_format($warning, 0, ',', '.') }}</strong>
                     </div>
                     <div class="col-12 col-md-6 mt-3 mt-md-0">
                         <h6 class="text-muted">Khoảng cách cảnh báo</h6>
-                        <strong>{{$liquity}}</strong>
+                        <strong>{{ number_format($warning_distance, 0, ',', '.') }}</strong>
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <div class="col-12 col-md-6">
                         <h6 class="text-muted">Thanh lý</h6>
-                        <strong></strong>
+                        <strong>{{ number_format($liquity, 0, ',', '.') }}</strong>
                     </div>
                     <div class="col-12 col-md-6 mt-3 mt-md-0">
-                        <h6 class="text-muted">Khoảng cách vị thế</h6>
-                        <strong></strong>
+                        <h6 class="text-muted">Khoảng cách thanh lý</h6>
+                        <strong> {{ number_format($break_distance, 0, ',', '.') }}</strong>
                     </div>
                 </div>
 
                 <div class="row text-center">
                     <div class="col-12 col-md-4 mb-3">
-                        <button class="btn btn-outline-primary w-100">Lịch sử giao dịch</button>
+                        <button class="btn btn-outline-primary w-100" id='hisotry-btn'>Lịch sử giao dịch</button>
                     </div>
-                    <div class="col-12 col-md-4 mb-3">
+                    <!-- <div class="col-12 col-md-4 mb-3">
                         <button class="btn btn-outline-primary w-100">Chi tiết giao dịch</button>
-                    </div>
-                    <div class="col-12 col-md-4 mb-3">
+                    </div> -->
+                    <!-- <div class="col-12 col-md-4 mb-3">
                         <button class="btn btn-outline-primary w-100">Kết thúc giao dịch sớm</button>
-                    </div>
-                    <div class="col-12 col-md-4 mb-3">
+                    </div> -->
+                    <!-- <div class="col-12 col-md-4 mb-3">
                         <button class="btn btn-outline-primary w-100">Thêm tiền cọc</button>
-                    </div>
+                    </div> -->
                     <div class="col-12 col-md-4 mb-3">
                         <button class="btn btn-outline-primary w-100" id='extend-finance-btn'>Mở rộng tài chính</button>
                     </div>
-                    <div class="col-12 col-md-4 mb-3">
+                    <!-- <div class="col-12 col-md-4 mb-3">
                         <button class="btn btn-outline-primary w-100">Yêu cầu rút lãi</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -113,9 +141,20 @@
     document.addEventListener('DOMContentLoaded', function() {
         // Add event listener to the "Mở rộng tài chính" button
         console.log("DOMContentLoaded");
+
+         // Pass PHP data to JavaScript
+        const id = <?php echo json_encode($id); ?>;
+
+        console.log('ID:', id); // Access the ID
+        console.log('/expandsubaccount/'+id);
         document.getElementById('extend-finance-btn').addEventListener('click', function() {
             // Redirect to the specified URL
-            window.location.href = '/expandsubaccount/';
+            window.location.href = '/expandsubaccount/'+id;
+        });
+
+        document.getElementById('hisotry-btn').addEventListener('click', function() {
+            // Redirect to the specified URL
+            window.location.href = '/subaccountHistory/'+id;
         });
     });
 </script>

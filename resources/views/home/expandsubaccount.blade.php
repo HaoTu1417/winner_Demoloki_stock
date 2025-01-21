@@ -203,8 +203,9 @@
             success: function(response) {
                 if (response.status) {
                     alert('Data submitted successfully!');
-                    $('#modal_update').modal('hide');
-                    location.reload(); // Reload the page to reflect the changes
+                    //$('#modal_update').modal('hide');
+                  
+                     window.location.href ='/subaccountdeatil/'+subaccountId;
                 } else {
                     alert(response.message);
                 }

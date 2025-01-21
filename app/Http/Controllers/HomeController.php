@@ -54,13 +54,115 @@ class HomeController extends BaseController
     public function subaccountDetail(Request $request, $id)
     {
         $account = DB::table('customer_debt')->where('id', $id)->first();
+
+       
+
+        try {
+            $results = DB::table('orders AS t')
+            ->leftJoin('stocks AS s', 't.stock', '=', 's.stock')
+            ->select(
+                't.subaccount_Id',
+                't.stock AS stock_name',
+                DB::raw('SUM(t.quantity) AS total_quantity'),
+                's.lastPrice',
+                DB::raw('SUM(t.quantity) * s.lastPrice AS total_value')
+            )
+            ->where('t.subaccount_Id', $account->id)
+            ->groupBy('t.subaccount_Id', 't.stock', 's.lastPrice')
+            ->get();
+
+            // Calculate the grand total of all total_value
+            $grandTotal = $results->sum('total_value') * 1000;
+    
+            // Return the results as JSON
+            Log::info([
+                'success' => true,
+                'data' => json_encode($results),
+                '$grandTotal'=>$grandTotal,
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Error retrieving stock details: ' . $e->getMessage(),
+            ], 500);
+        }
+
+        $total_value = $grandTotal + $account->current_money + $account->deposit; 
+        $warning_distance =  $total_value- $account->warning_line;
+        $break_distance = $total_value - $account->break_line;
+        $init_money = $account->deposit + $account->money;
+
+
+        $this->data['stock_value'] = $grandTotal;
+        $init_money = $account->deposit + $account->money;
         $this->data['id'] = $id;
         $this->data['account'] = $account;
-        $this->data['warning'] = 123;
-        $this->data['liquity'] = 456;
+        $this->data['warning'] = $account->warning_line;
+        $this->data['liquity'] = $account->break_line;
+        $this->data['type'] = $account->type;
+        $this->data['init_money']=$init_money;
+        $this->data['total_value'] = $total_value;
+        $this->data['warning_distance']= $warning_distance;
+        $this->data['break_distance'] = $break_distance;
+
+
+
+
+        // $total_value = $grandTotal + $item->current_money + $item->deposit; 
+        // $warning_line =  $total_value- $item->warning_line;
+        // $break_line = $total_value - $item->break_line;
+        // 
+        
+        // Log::info('$item'.json_encode($item));
+        // array_push($listDebt, [
+        //     'id' => $item->id,
+        //     'type' => $item->type,
+        //     'name' => $arrWallet[$item->type - 1],
+        //     'image' => $arImag[$item->type - 1],
+        //     'deposit' => $item->deposit,
+        //     'money' => $item->money,
+        //     'created_at' => Carbon::parse($item->created_at)->format('d-m-Y'),
+        //     'next_at' => Carbon::parse($item->next_at)->format('d-m-Y'),
+        //     'exp_day' => $expDay,
+        //     'exp_daynum' => $item->exp_day,
+        //     'percent' => $item->percent,
+        //     'is_auto' => $item->is_auto,
+        //     'status_name' => $arStatus[$item->status],
+        //     'status' => $item->status,
+        //     'enabled'=> $item->enabled,
+        //     'warning_line' => $item->warning_line,
+        //     'break_line' => $item->break_line,
+        //     'current_money' => $item->current_money,
+        //     'stock_value'=>$grandTotal,
+        //     'warning_stock' =>$warning_line ,
+        //     'break_stock' =>$break_line,
+        //     'init_money' => $init_money,
+        //     'total_value'=> $total_value,
+
+        // ]);
+
+
+        
         return view('home.subaccountDetail',$this->data);
     }
 
+    public function subaccountHistory(Request $request, $id)
+    {
+
+        $historyOrders = DB::table('historys')
+        ->where('subaccount_Id', $id)
+        ->whereIn('type', [2, 3])
+        ->get()
+        ->toArray();
+
+        // return response()->json([
+        //     'success' => false,
+        //     'message' => json_encode($historyOrders),
+        // ], 500);
+        $this->data['historyOrders'] = $historyOrders;
+      Log::info('history orders 11123'.json_encode($historyOrders).'$id'.$id);
+      return view('home.subaccounthistory',$this->data);
+    }
     public function setlang(Request $request)
     {
         session(['googtrans' => '/vi/' . $request->lang]);
