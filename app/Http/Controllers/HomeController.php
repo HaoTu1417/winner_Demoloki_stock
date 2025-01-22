@@ -163,6 +163,35 @@ class HomeController extends BaseController
       Log::info('history orders 11123'.json_encode($historyOrders).'$id'.$id);
       return view('home.subaccounthistory',$this->data);
     }
+
+
+    public function subaccountterminate(Request $request, $id)
+    {
+
+        $subaccount = DB::table('customer_debt')
+        ->where('id', $id)
+        ->get()
+        ->first();
+        $this->data['subaccount'] =  $subaccount;
+      Log::info('homeController subaccountterminate subaccount'.json_encode($subaccount));
+      return view('home.subaccountterminate',$this->data);
+    }
+
+
+    public function processTerminateSubaccount(Request $request)
+    {
+        //TODO: check coi id có tồn tại không
+
+        //TODO: check xem có đang sở hữu cổ phiếu không (đã khớp lệnh thành công)
+
+        //TODO: check xem trạng thái có đang trong review không
+
+        //TODO: xoá hết cổ phiếu đang chờ khớp lệnh
+
+        //TODO: thay đổi các loại trạng thái của các record trong db
+        return $this->error('Thay đổi tài khoản giao dịch thành công');
+    }
+
     public function setlang(Request $request)
     {
         session(['googtrans' => '/vi/' . $request->lang]);
