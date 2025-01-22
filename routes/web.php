@@ -269,9 +269,11 @@ Route::group(['middleware' => ['user'], 'prefix'  => ''], function () {
     Route::get('/subaccountdeatil/{id}', [HomeController::class, 'subaccountDetail'])->name('subaccountDetail');
     Route::get('/expandsubaccount/{id}', [HomeController::class, 'expandsubaccount'])->name('expandsubaccount');
     Route::get('/subaccountHistory/{id}', [HomeController::class, 'subaccountHistory'])->name('subaccountHistory');
+    Route::get('/subaccountterminate/{id}', [HomeController::class, 'subaccountterminate'])->name('subaccountterminate');
     Route::post('/processexpandsubaccount', [HomeController::class, 'processexpandsubaccount'])->name('processexpandsubaccount');
     Route::post('/cancelOrder/{id}', [HomeController::class, 'cancelOrder'])->name('cancelOrder');
     Route::post('/changeSubaccount/{id}', [HomeController::class, 'changeSubaccount'])->name('changeSubaccount');
+    Route::post('/processTerminateSubaccount', [HomeController::class, 'processTerminateSubaccount'])->name('processTerminateSubaccount');
 });
 
 Route::get('/getallstock', [HomeController::class, 'getallstock'])->name('getallstock');

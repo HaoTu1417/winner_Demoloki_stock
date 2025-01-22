@@ -114,9 +114,9 @@
                     <!-- <div class="col-12 col-md-4 mb-3">
                         <button class="btn btn-outline-primary w-100">Chi tiết giao dịch</button>
                     </div> -->
-                    <!-- <div class="col-12 col-md-4 mb-3">
-                        <button class="btn btn-outline-primary w-100">Kết thúc giao dịch sớm</button>
-                    </div> -->
+                    <div class="col-12 col-md-4 mb-3">
+                        <button class="btn btn-outline-primary w-100" id='expand-btn'>Kết thúc giao dịch sớm</button>
+                    </div>
                     <!-- <div class="col-12 col-md-4 mb-3">
                         <button class="btn btn-outline-primary w-100">Thêm tiền cọc</button>
                     </div> -->
@@ -145,8 +145,7 @@
          // Pass PHP data to JavaScript
         const id = <?php echo json_encode($id); ?>;
 
-        console.log('ID:', id); // Access the ID
-        console.log('/expandsubaccount/'+id);
+     
         document.getElementById('extend-finance-btn').addEventListener('click', function() {
             // Redirect to the specified URL
             window.location.href = '/expandsubaccount/'+id;
@@ -155,6 +154,11 @@
         document.getElementById('hisotry-btn').addEventListener('click', function() {
             // Redirect to the specified URL
             window.location.href = '/subaccountHistory/'+id;
+        });
+
+        document.getElementById('expand-btn').addEventListener('click', function() {
+            // Redirect to the specified URL
+            window.location.href = '/subaccountterminate/'+id;
         });
     });
 </script>

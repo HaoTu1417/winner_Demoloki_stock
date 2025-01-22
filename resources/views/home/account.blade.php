@@ -342,7 +342,7 @@
        Danh sách hợp đồng
     </div>
     <div class="d-flex"
-        style="height:100vh;padding:15px;background-color:#dfebfb;justify-content:flex-start;align-items:flex-start;flex-direction:column">
+        style="padding:15px;background-color:#dfebfb;justify-content:flex-start;align-items:flex-start;flex-direction:column">
         <a href="{{route('accountAfter')}}" style="text-decoration:none;;background: rgb(195, 209, 251);
             color: rgb(57, 63, 108);
             font-weight: 500;cursor:pointer;
@@ -391,13 +391,37 @@
                         <span>Chuyển đổi giao dịch</span>
                     </div> -->
 
-                    <div class="<?php echo $item["enabled"] != null && $item["enabled"] == 1 ? 'circle-container' : 'outlined-container'; ?>" 
+                    <!-- <div class="<?php echo $item["enabled"] != null && $item["enabled"] == 1 ? 'circle-container' : 'outlined-container'; ?>" 
                         onclick="handleClick('container', <?php echo $item['id']; ?>, event)">
                         <div class="<?php echo $item["enabled"] != null && $item["enabled"] == 1 ? 'circle' : 'outlined-circle'; ?>" 
                             onclick="handleClick('circle', <?php echo $item['id']; ?>, event)">
                         </div>
                         <span onclick="handleClick('span', <?php echo $item['id']; ?>, event)">Chuyển đổi giao dịch</span>
-                    </div>
+                    </div> -->
+
+                    <?php if ($item["status"] == 1): ?>
+                        <div class="<?php echo $item["enabled"] != null && $item["enabled"] == 1 ? 'circle-container' : 'outlined-container'; ?>" 
+                            onclick="handleClick('container', <?php echo $item['id']; ?>, event)">
+                            <div class="<?php echo $item["enabled"] != null && $item["enabled"] == 1 ? 'circle' : 'outlined-circle'; ?>" 
+                                onclick="handleClick('circle', <?php echo $item['id']; ?>, event)">
+                            </div>
+                            <span onclick="handleClick('span', <?php echo $item['id']; ?>, event)">Chuyển đổi giao dịch</span>
+                        </div>
+                    <?php elseif ($item["status"] == 0): ?>
+                        <div style="color: orange;">
+                            <span>Đang chờ xét duyệt</span>
+                        </div>
+                        <?php elseif ($item["status"] == 2): ?>
+                        <div style="color: red;">
+                            <span>Tài khoản bị từ chối xét duyệt</span>
+                        </div>
+                    <?php elseif ($item["status"] == 3): ?>
+                        <div style="color: red;">
+                            <span>Tài khoản đã tất toán</span>
+                        </div>
+                    <?php else: ?>
+                            <div style="color: red;">Tài khoản không khả dụng</div>
+                    <?php endif; ?>
 
                 </div>
                 <div style="" class="flex-row justify-space-between">

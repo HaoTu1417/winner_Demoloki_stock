@@ -180,16 +180,31 @@ class HomeController extends BaseController
 
     public function processTerminateSubaccount(Request $request)
     {
-        //TODO: check coi id có tồn tại không
+        try{
+            //check coi id có tồn tại không
+            $exists = DB::table('customer_debt')->where('id', $request->id)->exists();
+            if (! $exists) {
+                return $this->error('Không tìm thấy tài khoản giao dịch');
+            }
 
-        //TODO: check xem có đang sở hữu cổ phiếu không (đã khớp lệnh thành công)
+            //check xem có đang sở hữu cổ phiếu không (đã khớp lệnh thành công)
+            $holdingStocks = DB::table('orders')->where('subaccount_Id', $request->id)->get()->toArray();
+            if(count($holdingStocks)>0)
+            {
+                return $this->error('Vui lòng bán hết cổ phiếu trước khi kết thúc');
+            }
 
-        //TODO: check xem trạng thái có đang trong review không
+            //TODO: check xem trạng thái có đang trong review không
 
-        //TODO: xoá hết cổ phiếu đang chờ khớp lệnh
+            //TODO: xoá hết cổ phiếu đang chờ khớp lệnh
 
-        //TODO: thay đổi các loại trạng thái của các record trong db
-        return $this->error('Thay đổi tài khoản giao dịch thành công');
+            //TODO: thay đổi các loại trạng thái của các record trong db
+            return $this->success('Thay đổi tài khoản giao dịch thành công');
+
+        } catch (\Exception $e) {
+            Log::info('processTerminateSubaccount exception: '.$e->getMessage());
+            return $this->error('Kết thúc tài khoản giao dịch thất bại');
+        }
     }
 
     public function setlang(Request $request)
@@ -341,7 +356,7 @@ class HomeController extends BaseController
             ->whereRaw('status <= 1')
             ->first();
         if ($checkDebt != null) {
-            return $this->error('Bạn đang có khoản vay rồi');
+            //return $this->error('Bạn đang có khoản vay rồi');
         }
         if ($request->percent < 2 || $request->percent > 10) {
             return $this->error('Vui lòng chọn tỷ lệ');
@@ -437,7 +452,7 @@ class HomeController extends BaseController
             ->whereRaw('status <= 1')
             ->first();
         if ($checkDebt != null) {
-            return $this->error('Bạn đang có khoản vay rồi');
+            //return $this->error('Bạn đang có khoản vay rồi');
         }
         if ($request->percent < 2 || $request->percent > 10) {
             return $this->error('Vui lòng chọn tỷ lệ');
@@ -899,7 +914,7 @@ class HomeController extends BaseController
         $arrWallet = ['Hàng ngày', 'Trải nghiệm', 'Hàng tuần', 'Hàng tháng', 'Miễn lãi', 'VIP'];
         $arImag = ['assets/images/dowload/icon_dayfund.png', 'assets/images/dowload/icon_freefund.png', 'assets/images/dowload/icon_weekfund.png', 'assets/images/dowload/icon_monthfund.png', 'assets/images/dowload/icon_nofeefund.png', 'assets/images/dowload/icon_vipfund.png'];
         $arStatus = ['Chờ duyệt', 'Đang hoạt động', 'Huỷ','Đã hết hạn'];
-        $debt = DB::table('customer_debt')->where('customer_id', Auth::user()->id)->orderBy('enabled', 'desc')->get();
+        $debt = DB::table('customer_debt')->where('customer_id', Auth::user()->id)->whereIn('status',[0,1,])->orderBy('enabled', 'desc')->get();
         $listDebt = [];
        
         $this->data['customer'] = Auth::user();
@@ -965,7 +980,7 @@ class HomeController extends BaseController
                     'exp_daynum' => $item->exp_day,
                     'percent' => $item->percent,
                     'is_auto' => $item->is_auto,
-                    'status_name' => $arStatus[$item->status],
+                    'status_name' => isset($arStatus[$item->status]) ? $arStatus[$item->status] : 'Default Status',
                     'status' => $item->status,
                     'enabled'=> $item->enabled,
                     'warning_line' => $item->warning_line,
@@ -984,6 +999,7 @@ class HomeController extends BaseController
         return view('home.account', $this->data);
     }
 
+    // hiển thị trang lịch sử giao dịch, path /chitiet
     public function chitiet()
     {
         $this->data['history'] = DB::table('historys')->where('customer_id', Auth::user()->id)->latest()->get();
@@ -1030,7 +1046,7 @@ class HomeController extends BaseController
         $this->data['stock'] = $request->stock;
         //echo '<p>Hello World</p>';
        // lay het hop dong ra
-       $listDebt = DB::table('customer_debt')->where('customer_id', Auth::user()->id)->get()->toArray();
+       //$listDebt = DB::table('customer_debt')->where('customer_id', Auth::user()->id)->get()->toArray();
        //$pendingOrders = DB::table('orders')->where('status',0)->get()->toArray();
        //  $query = DB::table('stock_tplus')->where('customer_id', Auth::user()->id)->get();
        $this->data['debtFunds'] = DB::table('customer_debt')->where('id', Auth::user()['subaccount_Id'])->get()->first();
@@ -2931,12 +2947,19 @@ class HomeController extends BaseController
         return $this->error('Rút lãi thành công');
     }
     public function changeSubaccount(Request $request){
-        Log::info('home controller changeSubaccount $request'.$request->id);
+
+        // kiểm tra nếu tài khoản chưa được duyệt thì không thể thay đổi
         $selectedSubaccount =  DB::table('customer_debt')->where('id', $request->id)->first();
-        Log::info('home controller changeSubaccount $selectedSubaccount'.json_encode($selectedSubaccount));
+        if($selectedSubaccount->status==2){
+            $this->error('Tài khoản chưa được xét duyệt');
+        }
+        if($selectedSubaccount->status==3){
+            $this->error('Tài khoản đã tất toán, không thể sử dụng');
+        }
+
+
         $curentSubaccount = DB::table('customer_debt')->where('id', Auth::user()->subaccount_Id)->first();
         if($curentSubaccount!=null){
-            Log::info('home controller changeSubaccount $curentSubaccount'.json_encode($curentSubaccount));
             //cap nhat trang thai enable của tai khoan dang chon
             DB::table('customer_debt')->where('id', $curentSubaccount->id)->update([
                 'enabled' => 0,
@@ -2952,7 +2975,6 @@ class HomeController extends BaseController
         DB::table('customers')->where('id', Auth::user()->id)->update([
             'subaccount_Id' => $selectedSubaccount->id,
         ]);
-        Log::info('home controller changeSubaccount $subaccount_Id'.$selectedSubaccount->id);
         return $this->success('Thay đổi tài khoản giao dịch thành công');
     }
 }

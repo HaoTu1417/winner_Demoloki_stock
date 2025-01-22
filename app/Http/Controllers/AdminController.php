@@ -1300,6 +1300,7 @@ class AdminController extends BaseController
     
     public function acceptdebt(Request $request){
         $data = DB::table('customer_debt')->where('id', $request->id)->first();
+       
         if($data == null){
             return $this->error('Khoản vay không hợp lệ');
         }
