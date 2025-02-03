@@ -182,8 +182,8 @@ class HomeController extends BaseController
     {
         try{
             //check coi id có tồn tại không
-            $exists = DB::table('customer_debt')->where('id', $request->id)->exists();
-            if (! $exists) {
+            $subaccount = DB::table('customer_debt')->where('id', $request->id)->get()->first();
+            if ($subaccount == null) {
                 return $this->error('Không tìm thấy tài khoản giao dịch');
             }
 
@@ -191,18 +191,46 @@ class HomeController extends BaseController
             $holdingStocks = DB::table('orders')->where('subaccount_Id', $request->id)->get()->toArray();
             if(count($holdingStocks)>0)
             {
-                return $this->error('Vui lòng bán hết cổ phiếu trước khi kết thúc');
+                //return $this->error('Vui lòng bán hết cổ phiếu trước khi kết thúc');
             }
 
-            //TODO: check xem trạng thái có đang trong review không
+            //check xem trạng thái có đang trong review không
+            if($subaccount->status == 0){
 
-            //TODO: xoá hết cổ phiếu đang chờ khớp lệnh
+                return $this->error('Tài khoản đang được xét duyệt không thể tất toán');
+            }
+
+            //xoá hết cổ phiếu đang chờ khớp lệnh và trả tiền về cho subaccount.
+            $this->cancelOrder2($request->id);
+
 
             //TODO: thay đổi các loại trạng thái của các record trong db
-            return $this->success('Thay đổi tài khoản giao dịch thành công');
+                //TODO: trả tiền về tài khoản của customer.
+                $customerAccount = DB::table('customers')->where('id', $subaccount->customer_id)->get()->first();
+                $customerOldMoney = $customerAccount->money;
+                $customerNewMoney = $customerOldMoney + $subaccount-> deposit;
+                Log::info('Cancel subaccount current money '.$customerAccount->money. ' return '.$subaccount-> deposit.' to user, new amount '.$customerNewMoney.' '.$subaccount->customer_id.' '.json_encode($customerAccount));
+                //DB::table('customers')->where('id', $subaccount->customer_id)->update(['money'=>$customerNewMoney]);
+                //TODO: ghi lịch sử huỷ tài khoàn 
+                Log::info('record to history');
+                DB::table('historys')->insert([
+                    'customer_id' => $subaccount->customer_id,
+                    'befores' => $customerOldMoney,
+                    'money' => $subaccount-> deposit,
+                    'afters' => $customerNewMoney,
+                    'created_at' => Carbon::now(),
+                    'note' => 'Kết thúc giao dịch tài khoản '.$request->id.' hoàn trả tiền cọc '.$subaccount-> deposit,
+                    'note_trans' => '提前结束合约'.$request->id.'退还押金 '.$subaccount-> deposit, // Bản dịch sang tiếng Trung giản thể
+                    'subaccount_Id' => $subaccount->id
+
+                ]);
+                // thay đôi trạng thái của subaccount
+                DB::table('customer_debt')->where('id', $request->id)->update(['status'=>2]);
+            return $this->success('Kết thúc tài khoản giao dịch thành công');
 
         } catch (\Exception $e) {
             Log::info('processTerminateSubaccount exception: '.$e->getMessage());
+            Log::error('Stack trace: ' . $e->getTraceAsString());
             return $this->error('Kết thúc tài khoản giao dịch thất bại');
         }
     }
@@ -918,7 +946,6 @@ class HomeController extends BaseController
         $listDebt = [];
        
         $this->data['customer'] = Auth::user();
-        Log::info('---------');
         if ($debt != null && count($debt) > 0) {
             foreach ($debt as $key => $item) {
                 $expDay = "";
@@ -1037,7 +1064,23 @@ class HomeController extends BaseController
             ->whereRaw('((type = 1 and t >= 3) or type = 2)')
             ->selectRaw('ifnull(sum(quantity),0) as quantity')
             ->first();
-       $pendingOrders = DB::table('orders')->where('status',0)->get()->toArray();
+
+
+        $debtAccount =  DB::table('customer_debt')->where('id', Auth::user()['subaccount_Id'])->where('status',1)->get()->first();
+        if($debtAccount==null)
+        {
+            Log::warning('Available trading account not found for user: '.Auth::user()->id.' account: '.Auth::user()['subaccount_Id']);
+        }
+
+        $this->data['current_money'] =$debtAccount!=null? $debtAccount->current_money:0;
+
+
+       $pendingOrders = DB::table('orders')
+                        ->where('status',0)
+                        ->where('subaccount_Id',$debtAccount->id)
+                        ->get()
+                        ->toArray();
+        Log::info('home action pendingOrders '.json_encode($pendingOrders));
         $this->data['quantityAvaiable'] = $totalAvaiable->quantity;
         $this->data['pendingOrders'] = $pendingOrders;
         $dataFollow = DB::table('stock_follows')->where('stock', $request->stock)->where('customer_id', Auth::user()->id)->first();
@@ -1049,7 +1092,8 @@ class HomeController extends BaseController
        //$listDebt = DB::table('customer_debt')->where('customer_id', Auth::user()->id)->get()->toArray();
        //$pendingOrders = DB::table('orders')->where('status',0)->get()->toArray();
        //  $query = DB::table('stock_tplus')->where('customer_id', Auth::user()->id)->get();
-       $this->data['debtFunds'] = DB::table('customer_debt')->where('id', Auth::user()['subaccount_Id'])->get()->first();
+
+       
         // Log::info('$this->data[\'debtFunds\']'.json_encode($this->data['debtFunds']).' '. Auth::user()['subaccount_Id']); 
     //    $this->data['listDebt'] = $listDebt;
         return view('home.test', $this->data);
@@ -1765,22 +1809,86 @@ class HomeController extends BaseController
     }
 
     public function cancelOrder(Request $request, $id)
-{
-    Log::info("cancelOrder for ID: " . $id);
+    { 
 
-    $listOrder = DB::table('orders')->where('id', $id)->where('status', 0)->get();
+      
+        $listOrder = DB::table('orders')->where('id', $id)->where('status', 0)->get()->first();
+        $subAccount =  DB::table('customer_debt')->where('id', $listOrder->subaccount_Id)->get()->first();
+        // Uncomment these lines to update the order status and delete related data:
+        // 
+        DB::table('orders')->where('id', $listOrder->id)->update(['status' => 2]);
+        DB::table('stock_tplus')->where('order_id', $listOrder->id)->update(['status' => 2]);
 
-    if ($listOrder != null && count($listOrder) > 0) {
-        foreach ($listOrder as $item) {
-            Log::info("cancelOrder item: " . json_encode($item));
-            // Uncomment these lines to update the order status and delete related data:
-            DB::table('orders')->where('id', $item->id)->update(['status' => 2]);
-            DB::table('stock_tplus')->where('order_id', $item->id)->delete();
-        }
+         //trả tiền về cho tài khoản
+        $moneyToReturn = $listOrder->prices * $listOrder->quantity;
+        $currentMoney =  $subAccount->current_money;
+        //TODO: validate số tiền trước
+        $newMoney = $currentMoney+$moneyToReturn;
+        DB::table('customer_debt')->where('id', $listOrder->subaccount_Id)->update(['current_money'=>$newMoney]);
+        //note to history
+        DB::table('historys')->insert([
+            'customer_id' => $listOrder->customer_id,
+            'befores' => $currentMoney,
+            'money' => $moneyToReturn,
+            'afters' => $newMoney,
+            'created_at' => Carbon::now(),
+            'note' => 'Huỷ lệnh đặt bán ' . number_format($listOrder->quantity) . ' CP ' . $listOrder->stock,
+            'note_trans' => '取消卖出 ' . number_format($listOrder->quantity) . ' 股票 ' . $listOrder->stock, // Bản dịch sang tiếng Trung giản thể
+            'subaccount_Id' => $listOrder->subaccount_Id
+
+        ]);
+        
+
+        
+
+        return response()->json(['success' => true, 'message' => 'Huỷ đơn thành công']);
     }
 
-    return response()->json(['success' => true, 'message' => 'Huỷ đơn thành công']);
-}
+    public function cancelOrder2($subaccount_id)
+    { 
+        // $subaccount_id = 90;
+        $listOrder = DB::table('orders')->where('subaccount_id',  $subaccount_id)->where('status', 0)->get();
+        $subAccount =  DB::table('customer_debt')->where('id', $subaccount_id)->get()->first();
+        
+        $currentMoney =  $subAccount->current_money;
+        $moneyToReturn = 0;
+        if ($listOrder != null && count($listOrder) > 0) {
+            foreach ($listOrder as $item) {
+                Log::info("cancelOrder item: " . json_encode($item));
+                // Uncomment these lines to update the order status and delete related data:
+                // DB::table('orders')->where('id', $item->id)->update(['status' => 2]);
+                // DB::table('stock_tplus')->where('order_id', $item->id)->update(['status' => 2]);
+                Log::info('Update order status to 2 '.$item->id);
+                Log::info('Update tplus sstatus to 2'.$item->id);
+             
+                  //trả tiền về cho tài khoản
+                $moneyToReturn += $item->prices * $item->quantity;
+                Log::info('$moneyToReturn '.$moneyToReturn);
+                
+               
+                
+                
+            }
+             //TODO: validate số tiền trước
+            $newMoney = $currentMoney+$moneyToReturn;
+            //DB::table('customer_debt')->where('id', $item->subaccount_Id)->update(['current_money'=>$newMoney]);
+            Log::info('Update current money to '.$newMoney);
+            //note to history
+            // DB::table('historys')->insert([
+            //     'customer_id' => $item->customer_id,
+            //     'befores' => $currentMoney,
+            //     'money' => $moneyToReturn,
+            //     'afters' => $newMoney,
+            //     'created_at' => Carbon::now(),
+            //     'note' => 'Huỷ lệnh đặt bán ' . number_format($item->quantity) . ' CP ' . $item->stock,
+            //     'note_trans' => '取消卖出 ' . number_format($item->quantity) . ' 股票 ' . $item->stock, // Bản dịch sang tiếng Trung giản thể
+            //     'subaccount_Id' => $item->subaccount_Id
+
+            // ]);
+            Log::info('update history, before '.$currentMoney.' after moneey '.$newMoney.' '.$item->subaccount_Id);
+        }
+        return response()->json(['success' => true, 'message' => 'Huỷ đơn thành công']);
+    }
 
     public function expandsubaccount(Request $request, $id)
     {
@@ -2593,7 +2701,7 @@ class HomeController extends BaseController
                 'money' => $afterAmountF0
             ]);
         }
-        $currentSubaccount = DB::table('customer_debt')->where('id', Auth::user()['subaccount_Id'])->get()->first();
+        
 
         //chưa chọn hoặc không hề có tài khoản con
         if(Auth::user()['subaccount_Id']==null){
@@ -2601,11 +2709,16 @@ class HomeController extends BaseController
             Log::info('sub account not found in customer information with id: '.Auth::user()['subaccount_Id']);
             return $this->error('Không tìm thấy tài khoản giao dịch, Vui lòng chọn hoặc tạo mới!');
         }
+        // lấy hợp đồng theo id và trạng thái của của hợp đồng phải là đã duyệt.
+        $currentSubaccount = DB::table('customer_debt')->where('id', Auth::user()['subaccount_Id'])->where('status',1)->get()->first();
 
-        // tài khoản con bị xoá hoặc Id của tài khoản con bị xoá, cái này vận hành bình thường
-        // sẽ không xảy ra
+
+        // Trường hợp null xảy ra khi :
+        //  1. hợp đồng này chưa được duyệt, nhưng vẫn dùng để mua bán được. đây là bug
+        //  2. tài khoản con bị xoá hoặc Id của tài khoản con bị xoá,
+        // cả 2 cái này vận hành bình thường sẽ không xảy ra
         if($currentSubaccount==null){
-            Log::info('sub account not found with id: '.Auth::user()['subaccount_Id']);
+            Log::error('sub account not found with id: '.Auth::user()['subaccount_Id']);
             return $this->error('Không tìm thấy tài khoản giao dịch, Vui lòng chọn hoặc tạo mới!');
         }
         if ($totalAmount + $totalFee > $currentSubaccount->current_money) {

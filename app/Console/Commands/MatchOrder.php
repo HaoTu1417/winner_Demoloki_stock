@@ -53,9 +53,7 @@ class MatchOrder extends Command
                         if ($dateCompare->addHour(12)->gt(Carbon::now())) {
                             $keyStock = Redis::keys('*_' . $item->stock . '*')[0];
                             $data = json_decode(Redis::get(str_replace('stock_', '', $keyStock)));
-                            Log::info("MatchOrder trc if");
                             if ((($data->lastPrice * 1000) <= $item->prices && $item->type == 1) || (($data->lastPrice * 1000) >= $item->prices && $item->type == 2)) {
-                                Log::info("MatchOrder sau if");
                                 DB::table('orders')->where('id', $item->id)->update(['status' => 1]);
                                 DB::table('stock_tplus')->where('order_id', $item->id)->update(['status' => 1]);
                                 $customerData = Customer::find($item->customer_id);
