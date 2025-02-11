@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi tiết tài khoản</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         .card-header h1, .card-header h2 {
             font-size: 1.5rem; /* Responsive font size for mobile */
@@ -14,8 +15,9 @@
             top: 15px;
             left: 15px;
             color: white;
-            font-size: 1.2rem;
+            font-size: 2rem;
             text-decoration: none;
+            font-weight:bold;
         }
 
     </style>
@@ -24,7 +26,7 @@
     <div class="container mt-4">
         <div class="card">
         <div class="card-header text-center bg-primary text-white position-relative">
-                <a href="javascript:history.back()" class="back-button">&#8592;</a>
+                <i style="color:#fff" onclick="history.back()" class="icon-back bi bi-chevron-left back-button"></i>   
                 <h5 class="mb-2">Chi tiết tài khoản</h5>
                 <h2><strong>Tổng tài sản (VND)</strong></h2>
                 <h1 class="mt-2"><strong>{{ number_format($total_value, 0, ',', '.') }}</strong></h1>

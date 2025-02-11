@@ -2750,6 +2750,8 @@ class HomeController extends BaseController
             'note' => 'Mua ' . number_format($quantity) . ' cổ phiếu ' . $stockData->stock, // Translated to Vietnamese
             'note_trans' => '购买 ' . number_format($quantity) . ' 股票 ' . $stockData->stock . ' ' . number_format($amount), // Bản dịch sang tiếng Trung giản thể
             'subaccount_Id'=>Auth::user()['subaccount_Id'],
+            'type'=>2,
+            
         ]);
         DB::table('stock_tplus')->insert([
             'order_id' => $id,
@@ -2970,7 +2972,8 @@ class HomeController extends BaseController
                 'afters' => $afterAmount,
                 'created_at' => Carbon::now(),
                 'note' => 'Đặt bán ' . number_format($quantity) . ' CP ' . $stockData->stock,
-                    'note_trans' => '卖出 ' . number_format($quantity) . ' 股票 ' . $stockData->stock // Bản dịch sang tiếng Trung giản thể
+                'note_trans' => '卖出 ' . number_format($quantity) . ' 股票 ' . $stockData->stock ,// Bản dịch sang tiếng Trung giản thể
+                'type' => 3
 
             ]);
             if ($totalSub > 0) {

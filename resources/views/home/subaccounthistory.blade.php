@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chi tiết giao dịch</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -48,13 +50,31 @@
         .transaction-details .text-success {
             color: #28a745;
         }
+        .icon-back{
+        font-size: 25px;
+
+        }   
+        .bi-chevron-left::before {
+            content: "\f284";
+            margin: 13px;
+
+        }
+        
     </style>
 </head>
 <body>
     <div class="container mt-4">
-        <a href="javascript:history.back()" class="back-button">&#8592;</a>
+        <!-- <a href="javascript:history.back()" class="back-button">&#8592;</a> -->
+        <div class="" style="background-color:rgb(62, 76, 244);display:flex;flex-direction:row">
+            <div  class="color:#fff" style="flex:1;height: 50px;">
+               <i style="color:#fff" onclick="history.back()" class="icon-back bi bi-chevron-left"></i>
+            </div>
+            <div style="text-align:center;flex:1;color:white;font-size:20px;white-space:nowrap;align-content:center"><span>Chi tiết giao dịch</span></div>
+            <div style="flex:1;justify-content:flex-end;display:flex" ></div>
+            <!-- <img class="js-show-change-langue" src="assets/images/dowload/hslang_white.png" style="width:22px;height:22px;margin-right:12px"> </img> -->
+        </div>
 
-        <h4 class="text-center">Chi tiết giao dịch</h4>
+        <!-- <h4 class="text-center"></h4> -->
 
         <?php if (isset($historyOrders) && !empty($historyOrders)) : ?>
             <?php foreach ($historyOrders as $order) : ?>
