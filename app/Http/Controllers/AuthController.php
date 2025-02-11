@@ -207,48 +207,56 @@ class AuthController extends BaseController
     }
     
     public function sendOtp(Request $request){
+        // Add debugging
+        \Log::info('Attempting to send OTP to email: ' . $request->email);
         
         if (!filter_var($request->email, FILTER_VALIDATE_EMAIL)) {
             return $this->error("Email không đúng định dạng");
         }
         
-        $email = $request->email;
-        $check = DB::table('customers')->where('email',$email)->get();
-        
-        if($check->count() > 0){
-            return $this->error('Tài khoản email đã tồn tại');
-        }
-        
-        
-        $otpCheck = DB::table("otps")->where('email', $email)->first();
-        
-       if ($otpCheck) {
-            $currentTime = now();
-            $expiryTime = Carbon::parse($otpCheck->time);            
-            $minutesDifference = $expiryTime->diffInMinutes($currentTime);
-            if ($minutesDifference > 2) {
-                $newOtp = mt_rand(100000, 999999);
-                Mail::to($email)->send(new SendOtpMail($newOtp));
-                DB::table('otps')->where('id',$otpCheck->id)->update([
-                    'time' => $currentTime,
-                    'otp' => $newOtp,
-                ]);
-                return $this->success('OTP dã được gửi thành công, OTP có thời hạn trong 2 phút.');
+        try {
+            $email = $request->email;
+            $newOtp = mt_rand(100000, 999999);
+            
+            // Log before sending email
+            \Log::info('Attempting to send mail with OTP: ' . $newOtp);
+            
+            Mail::to($email)->send(new SendOtpMail($newOtp));
+            
+            // Rest of your logic here...
+            $otpCheck = DB::table("otps")->where('email', $email)->first();
+            
+            if ($otpCheck) {
+                $currentTime = now();
+                $expiryTime = Carbon::parse($otpCheck->time);            
+                $minutesDifference = $expiryTime->diffInMinutes($currentTime);
+                if ($minutesDifference > 2) {
+                    $newOtp = mt_rand(100000, 999999);
+                    Mail::to($email)->send(new SendOtpMail($newOtp));
+                    DB::table('otps')->where('id',$otpCheck->id)->update([
+                        'time' => $currentTime,
+                        'otp' => $newOtp,
+                    ]);
+                    return $this->success('OTP dã được gửi thành công, OTP có thời hạn trong 2 phút.');
+                } else {
+                     return $this->error('Đã gửi OTP, vui lòng kiểm tra lại email !');
+                }
             } else {
-                 return $this->error('Đã gửi OTP, vui lòng kiểm tra lại email !');
-            }
-        } else {
-             $currentTime = now();
-             $newOtp = mt_rand(100000, 999999);
-             Mail::to($email)->send(new SendOtpMail($newOtp));
-             DB::table('otps')->insert([
-                    'email' => $email,
-                    'time' => $currentTime,
-                    'otp' => $newOtp,
-             ]);
-             
-              return $this->success('OTP dã được gửi thành công, OTP có thời hạn trong 2 phút.');
+                 $currentTime = now();
+                 $newOtp = mt_rand(100000, 999999);
+                 Mail::to($email)->send(new SendOtpMail($newOtp));
+                 DB::table('otps')->insert([
+                        'email' => $email,
+                        'time' => $currentTime,
+                        'otp' => $newOtp,
+                 ]);
+                 
+                  return $this->success('OTP dã được gửi thành công, OTP có thời hạn trong 2 phút.');
 
+            }
+        } catch (\Exception $e) {
+            \Log::error('Mail error: ' . $e->getMessage());
+            return $this->error('Error sending OTP: ' . $e->getMessage());
         }
     }
     

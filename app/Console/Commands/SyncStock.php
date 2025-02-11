@@ -78,9 +78,13 @@ class SyncStock extends Command
                     ]);
                 }
                 else if($dataStockCheck == null){
+                    if (strlen($exchange) > 10) {
+                        Log::warning("Exchange value exceeds allowed length: $exchange");
+                        $exchange = substr($exchange, 0, 10); // Truncate if necessary
+                    }
                     DB::table('stocks')->insert([
                         'stock' => $data->sym,
-                        'exchange' => $exchange,
+                        'exchange' => substr($exchange, 0, 10),
                         'stock_info' => '',
                         'mc' => $data->mc,
                         'c' => $data->c,

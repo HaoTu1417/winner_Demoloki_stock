@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.22.1/bootstrap-table.min.css"
         integrity="sha512-CcTkIsZd9q6wsVUGBewW5P1uXFcuI6mAsjEn+T+TJKLebXneMQPj1GpwU9O/dkajlHJj/40UBugBAcWN+eFo+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
     <style>
         .wordWrap{
             word-wrap: break-word;
@@ -950,7 +951,8 @@
                     success: function(res) {
 
                         if(res.status){
-                            window.open('https://app.datasstock.com');
+                            // window.open('https://app.datasstock.com');
+                            window.open('http://160.191.89.1:8000');
                         }
                         else{
                             alert(res.message);
