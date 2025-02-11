@@ -354,7 +354,7 @@ class HomeController extends BaseController
             'percent' => $percentApply,
             'is_auto' => $statusAuto,
             'note' => '',
-            'status' => 0,
+            'status' => 1,
             'current_money'=>$amount * $request->percent
         ]);
         $beforeAmount = $customerData->money;
@@ -522,7 +522,7 @@ class HomeController extends BaseController
             'percent' => $percentApply,
             'is_auto' => $statusAuto,
             'note' => '',
-            'status' => 0,
+            'status' => 1,
             'current_money'=>$amount * $request->percent
         ]);
         $beforeAmount = $customerData->money;
@@ -591,7 +591,7 @@ class HomeController extends BaseController
             'percent' => $percentApply,
             'is_auto' => $statusAuto,
             'note' => '',
-            'status' => 0,
+            'status' => 1,
             'current_money'=>$amount * $request->percent
         ]);
         $beforeAmount = $customerData->money;
@@ -662,7 +662,7 @@ class HomeController extends BaseController
             'percent' => $percentApply,
             'is_auto' => $statusAuto,
             'note' => '',
-            'status' => 0,
+            'status' => 1,
             'current_money'=>$amount * $request->percent
         ]);
         $beforeAmount = $customerData->money;
